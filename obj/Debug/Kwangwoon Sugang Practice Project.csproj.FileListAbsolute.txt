@@ -1,0 +1,24 @@
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\bin\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\bin\Debug\Kwangwoon Sugang Practice Project.exe.config
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.AssemblyReference.cache
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form1.resources
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form2.resources
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon_Sugang_Practice_Project.Properties.Resources.resources
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.GenerateResource.cache
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\obj\Debug\Kwangwoon Sugang Practice Project.pdb
+C:\Users\dncrz\source\repos\kwu_sugang_practice\Kwangwoon Sugang Practice Project\bin\Debug\Kwangwoon Sugang Practice Project.pdb
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\bin\Debug\Kwangwoon Sugang Practice Project.exe.config
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\bin\Debug\Kwangwoon Sugang Practice Project.exe
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\bin\Debug\Kwangwoon Sugang Practice Project.pdb
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.csproj.AssemblyReference.cache
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.csproj.SuggestedBindingRedirects.cache
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form1.resources
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form2.resources
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon_Sugang_Practice_Project.Properties.Resources.resources
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.csproj.GenerateResource.cache
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.exe
+D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.pdb
