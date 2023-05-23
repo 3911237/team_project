@@ -1,0 +1,12 @@
+C:\Users\1237\Desktop\team_project-main\bin\Release\Kwangwoon Sugang Practice Project.exe.config
+C:\Users\1237\Desktop\team_project-main\bin\Release\Kwangwoon Sugang Practice Project.exe
+C:\Users\1237\Desktop\team_project-main\bin\Release\Kwangwoon Sugang Practice Project.pdb
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon Sugang Practice Project.csproj.AssemblyReference.cache
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon Sugang Practice Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon_Sugang_Practice_Project.Form1.resources
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon_Sugang_Practice_Project.Form2.resources
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon_Sugang_Practice_Project.Properties.Resources.resources
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon Sugang Practice Project.csproj.GenerateResource.cache
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon Sugang Practice Project.exe
+C:\Users\1237\Desktop\team_project-main\obj\Release\Kwangwoon Sugang Practice Project.pdb

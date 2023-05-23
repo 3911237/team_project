@@ -181,7 +181,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgv_reglist);
-            this.groupBox1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox1.Location = new System.Drawing.Point(9, 7);
             this.groupBox1.Name = "groupBox1";
@@ -196,7 +196,7 @@
             this.dgv_reglist.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -222,7 +222,7 @@
             this.dgv_reglist.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -348,17 +348,28 @@
             // 
             // cmb_dept1
             // 
-            this.cmb_dept1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmb_dept1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmb_dept1.FormattingEnabled = true;
+            this.cmb_dept1.Items.AddRange(new object[] {
+            "전체검색",
+            "전자정보공과대학",
+            "소프트웨어융합대학",
+            "공과대학",
+            "자연과학대학",
+            "인문사회과학대학",
+            "정책법학대학",
+            "경영대학",
+            "교양"});
             this.cmb_dept1.Location = new System.Drawing.Point(837, 23);
             this.cmb_dept1.Name = "cmb_dept1";
-            this.cmb_dept1.Size = new System.Drawing.Size(98, 21);
+            this.cmb_dept1.Size = new System.Drawing.Size(98, 18);
             this.cmb_dept1.TabIndex = 27;
             this.cmb_dept1.Text = "전체검색";
+            this.cmb_dept1.SelectedIndexChanged += new System.EventHandler(this.cmb_dept1_SelectedIndexChanged);
             // 
             // btn_favadd
             // 
-            this.btn_favadd.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_favadd.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_favadd.Location = new System.Drawing.Point(10, 15);
             this.btn_favadd.Name = "btn_favadd";
             this.btn_favadd.Size = new System.Drawing.Size(91, 28);
@@ -375,6 +386,7 @@
             this.btn_search.TabIndex = 31;
             this.btn_search.Text = "검색";
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // cb_avail
             // 
@@ -382,17 +394,25 @@
             this.cb_avail.BackColor = System.Drawing.SystemColors.Window;
             this.cb_avail.Location = new System.Drawing.Point(1102, 49);
             this.cb_avail.Name = "cb_avail";
-            this.cb_avail.Size = new System.Drawing.Size(18, 17);
+            this.cb_avail.Size = new System.Drawing.Size(15, 14);
             this.cb_avail.TabIndex = 30;
             this.cb_avail.UseVisualStyleBackColor = false;
             // 
             // cmb_isu
             // 
-            this.cmb_isu.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmb_isu.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmb_isu.FormattingEnabled = true;
+            this.cmb_isu.Items.AddRange(new object[] {
+            "전체검색",
+            "교필",
+            "전필",
+            "기필",
+            "교선",
+            "전선",
+            "기선"});
             this.cmb_isu.Location = new System.Drawing.Point(1101, 23);
             this.cmb_isu.Name = "cmb_isu";
-            this.cmb_isu.Size = new System.Drawing.Size(91, 21);
+            this.cmb_isu.Size = new System.Drawing.Size(91, 18);
             this.cmb_isu.TabIndex = 29;
             this.cmb_isu.Text = "전체검색";
             // 
@@ -400,16 +420,18 @@
             // 
             this.tb_csearch.Location = new System.Drawing.Point(838, 44);
             this.tb_csearch.Name = "tb_csearch";
-            this.tb_csearch.Size = new System.Drawing.Size(226, 22);
+            this.tb_csearch.Size = new System.Drawing.Size(226, 19);
             this.tb_csearch.TabIndex = 33;
             // 
             // cmb_dept2
             // 
-            this.cmb_dept2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmb_dept2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmb_dept2.FormattingEnabled = true;
+            this.cmb_dept2.Items.AddRange(new object[] {
+            "전체검색"});
             this.cmb_dept2.Location = new System.Drawing.Point(940, 23);
             this.cmb_dept2.Name = "cmb_dept2";
-            this.cmb_dept2.Size = new System.Drawing.Size(125, 21);
+            this.cmb_dept2.Size = new System.Drawing.Size(125, 18);
             this.cmb_dept2.TabIndex = 28;
             this.cmb_dept2.Text = "전체검색";
             // 
@@ -422,7 +444,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox2.Location = new System.Drawing.Point(789, 7);
             this.groupBox2.Name = "groupBox2";
@@ -435,7 +457,7 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.btn_favadd);
-            this.groupBox3.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox3.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(459, 10);
             this.groupBox3.Name = "groupBox3";
@@ -450,7 +472,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(280, 42);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.Size = new System.Drawing.Size(27, 11);
             this.label5.TabIndex = 3;
             this.label5.Text = "여석";
             // 
@@ -460,7 +482,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(280, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(27, 11);
             this.label4.TabIndex = 2;
             this.label4.Text = "이수";
             // 
@@ -470,7 +492,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(12, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(27, 11);
             this.label3.TabIndex = 1;
             this.label3.Text = "과목";
             // 
@@ -480,17 +502,18 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(27, 11);
             this.label2.TabIndex = 0;
             this.label2.Text = "학과";
             // 
             // dgv_clist
             // 
             this.dgv_clist.AllowUserToAddRows = false;
+            this.dgv_clist.AllowUserToDeleteRows = false;
             this.dgv_clist.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -511,7 +534,7 @@
             this.dgv_clist.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -523,7 +546,6 @@
             this.dgv_clist.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_clist.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Cyan;
             this.dgv_clist.RowTemplate.Height = 45;
-            this.dgv_clist.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_clist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_clist.Size = new System.Drawing.Size(577, 176);
             this.dgv_clist.TabIndex = 35;
@@ -597,7 +619,7 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.btn_favclear);
-            this.groupBox10.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox10.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox10.Location = new System.Drawing.Point(789, 250);
             this.groupBox10.Name = "groupBox10";
@@ -609,11 +631,11 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label34.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label34.Location = new System.Drawing.Point(790, 632);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(580, 13);
+            this.label34.Size = new System.Drawing.Size(499, 11);
             this.label34.TabIndex = 39;
             this.label34.Text = "※ 시스템 과부하 방지를 위하여 동일 과목조회 버튼 5회 이상 클릭 시 인증번호를 입력해야 합니다.";
             // 
@@ -623,7 +645,7 @@
             this.dgv_favList.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -643,7 +665,7 @@
             this.dgv_favList.Name = "dgv_favList";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -711,33 +733,33 @@
             // tb_avail
             // 
             this.tb_avail.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_avail.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_avail.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_avail.ForeColor = System.Drawing.Color.Red;
             this.tb_avail.Location = new System.Drawing.Point(504, 90);
             this.tb_avail.Name = "tb_avail";
             this.tb_avail.ReadOnly = true;
-            this.tb_avail.Size = new System.Drawing.Size(78, 22);
+            this.tb_avail.Size = new System.Drawing.Size(78, 19);
             this.tb_avail.TabIndex = 38;
             this.tb_avail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox27
             // 
             this.textBox27.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox27.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox27.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox27.Location = new System.Drawing.Point(504, 65);
             this.textBox27.Name = "textBox27";
             this.textBox27.ReadOnly = true;
-            this.textBox27.Size = new System.Drawing.Size(78, 22);
+            this.textBox27.Size = new System.Drawing.Size(78, 19);
             this.textBox27.TabIndex = 37;
             // 
             // typeRef
             // 
             this.typeRef.BackColor = System.Drawing.SystemColors.Window;
-            this.typeRef.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.typeRef.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.typeRef.Location = new System.Drawing.Point(325, 40);
             this.typeRef.Name = "typeRef";
             this.typeRef.ReadOnly = true;
-            this.typeRef.Size = new System.Drawing.Size(48, 22);
+            this.typeRef.Size = new System.Drawing.Size(48, 19);
             this.typeRef.TabIndex = 34;
             this.typeRef.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -787,101 +809,101 @@
             // textBox17
             // 
             this.textBox17.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox17.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox17.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox17.Location = new System.Drawing.Point(195, 147);
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(93, 22);
+            this.textBox17.Size = new System.Drawing.Size(93, 19);
             this.textBox17.TabIndex = 50;
             // 
             // textBox18
             // 
             this.textBox18.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox18.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox18.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox18.Location = new System.Drawing.Point(195, 121);
             this.textBox18.Name = "textBox18";
             this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(93, 22);
+            this.textBox18.Size = new System.Drawing.Size(93, 19);
             this.textBox18.TabIndex = 49;
             // 
             // textBox19
             // 
             this.textBox19.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox19.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox19.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox19.Location = new System.Drawing.Point(100, 147);
             this.textBox19.Name = "textBox19";
             this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(93, 22);
+            this.textBox19.Size = new System.Drawing.Size(93, 19);
             this.textBox19.TabIndex = 48;
             // 
             // textBox20
             // 
             this.textBox20.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox20.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox20.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox20.Location = new System.Drawing.Point(67, 147);
             this.textBox20.Name = "textBox20";
             this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(31, 22);
+            this.textBox20.Size = new System.Drawing.Size(31, 19);
             this.textBox20.TabIndex = 47;
             // 
             // textBox21
             // 
             this.textBox21.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox21.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox21.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox21.Location = new System.Drawing.Point(100, 121);
             this.textBox21.Name = "textBox21";
             this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(93, 22);
+            this.textBox21.Size = new System.Drawing.Size(93, 19);
             this.textBox21.TabIndex = 46;
             // 
             // textBox22
             // 
             this.textBox22.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox22.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox22.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox22.Location = new System.Drawing.Point(67, 121);
             this.textBox22.Name = "textBox22";
             this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(31, 22);
+            this.textBox22.Size = new System.Drawing.Size(31, 19);
             this.textBox22.TabIndex = 45;
             // 
             // textBox11
             // 
             this.textBox11.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox11.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox11.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox11.Location = new System.Drawing.Point(195, 94);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(93, 22);
+            this.textBox11.Size = new System.Drawing.Size(93, 19);
             this.textBox11.TabIndex = 44;
             // 
             // textBox12
             // 
             this.textBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox12.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox12.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox12.Location = new System.Drawing.Point(195, 68);
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(93, 22);
+            this.textBox12.Size = new System.Drawing.Size(93, 19);
             this.textBox12.TabIndex = 43;
             // 
             // tb_time2
             // 
             this.tb_time2.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_time2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_time2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_time2.Location = new System.Drawing.Point(100, 94);
             this.tb_time2.Name = "tb_time2";
             this.tb_time2.ReadOnly = true;
-            this.tb_time2.Size = new System.Drawing.Size(93, 22);
+            this.tb_time2.Size = new System.Drawing.Size(93, 19);
             this.tb_time2.TabIndex = 42;
             // 
             // tb_day2
             // 
             this.tb_day2.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_day2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_day2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_day2.Location = new System.Drawing.Point(67, 94);
             this.tb_day2.Name = "tb_day2";
             this.tb_day2.ReadOnly = true;
-            this.tb_day2.Size = new System.Drawing.Size(31, 22);
+            this.tb_day2.Size = new System.Drawing.Size(31, 19);
             this.tb_day2.TabIndex = 41;
             // 
             // codeRef
@@ -890,7 +912,7 @@
             this.codeRef.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.codeRef.Location = new System.Drawing.Point(79, 20);
             this.codeRef.Name = "codeRef";
-            this.codeRef.Size = new System.Drawing.Size(0, 13);
+            this.codeRef.Size = new System.Drawing.Size(0, 11);
             this.codeRef.TabIndex = 40;
             // 
             // cntRef
@@ -898,80 +920,80 @@
             this.cntRef.AutoSize = true;
             this.cntRef.Location = new System.Drawing.Point(563, 94);
             this.cntRef.Name = "cntRef";
-            this.cntRef.Size = new System.Drawing.Size(0, 13);
+            this.cntRef.Size = new System.Drawing.Size(0, 11);
             this.cntRef.TabIndex = 39;
             // 
             // tb_prof
             // 
             this.tb_prof.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_prof.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_prof.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_prof.Location = new System.Drawing.Point(504, 40);
             this.tb_prof.Name = "tb_prof";
             this.tb_prof.ReadOnly = true;
-            this.tb_prof.Size = new System.Drawing.Size(78, 22);
+            this.tb_prof.Size = new System.Drawing.Size(78, 19);
             this.tb_prof.TabIndex = 36;
             this.tb_prof.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_credit
             // 
             this.tb_credit.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_credit.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_credit.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_credit.Location = new System.Drawing.Point(413, 40);
             this.tb_credit.Name = "tb_credit";
             this.tb_credit.ReadOnly = true;
-            this.tb_credit.Size = new System.Drawing.Size(28, 22);
+            this.tb_credit.Size = new System.Drawing.Size(28, 19);
             this.tb_credit.TabIndex = 35;
             this.tb_credit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_time1
             // 
             this.tb_time1.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_time1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_time1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_time1.Location = new System.Drawing.Point(100, 68);
             this.tb_time1.Name = "tb_time1";
             this.tb_time1.ReadOnly = true;
-            this.tb_time1.Size = new System.Drawing.Size(93, 22);
+            this.tb_time1.Size = new System.Drawing.Size(93, 19);
             this.tb_time1.TabIndex = 22;
             // 
             // tb_day1
             // 
             this.tb_day1.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_day1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_day1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_day1.Location = new System.Drawing.Point(67, 68);
             this.tb_day1.Name = "tb_day1";
             this.tb_day1.ReadOnly = true;
-            this.tb_day1.Size = new System.Drawing.Size(31, 22);
+            this.tb_day1.Size = new System.Drawing.Size(31, 19);
             this.tb_day1.TabIndex = 19;
             // 
             // tb_subject
             // 
             this.tb_subject.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_subject.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_subject.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_subject.Location = new System.Drawing.Point(238, 13);
             this.tb_subject.Name = "tb_subject";
             this.tb_subject.ReadOnly = true;
-            this.tb_subject.Size = new System.Drawing.Size(344, 22);
+            this.tb_subject.Size = new System.Drawing.Size(344, 19);
             this.tb_subject.TabIndex = 18;
             // 
             // textBox10
             // 
             this.textBox10.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox10.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox10.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox10.Location = new System.Drawing.Point(67, 41);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(105, 22);
+            this.textBox10.Size = new System.Drawing.Size(105, 19);
             this.textBox10.TabIndex = 17;
             // 
             // tb_ccode
             // 
             this.tb_ccode.BackColor = System.Drawing.Color.White;
-            this.tb_ccode.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_ccode.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_ccode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.tb_ccode.Location = new System.Drawing.Point(67, 15);
             this.tb_ccode.Name = "tb_ccode";
             this.tb_ccode.ReadOnly = true;
-            this.tb_ccode.Size = new System.Drawing.Size(105, 22);
+            this.tb_ccode.Size = new System.Drawing.Size(105, 19);
             this.tb_ccode.TabIndex = 16;
             this.tb_ccode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -981,18 +1003,18 @@
             this.label21.ForeColor = System.Drawing.Color.MediumBlue;
             this.label21.Location = new System.Drawing.Point(425, 125);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(33, 13);
+            this.label21.Size = new System.Drawing.Size(27, 11);
             this.label21.TabIndex = 15;
             this.label21.Text = "분반";
             // 
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox8.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox8.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox8.Location = new System.Drawing.Point(462, 117);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(120, 22);
+            this.textBox8.Size = new System.Drawing.Size(120, 19);
             this.textBox8.TabIndex = 14;
             // 
             // label20
@@ -1001,7 +1023,7 @@
             this.label20.ForeColor = System.Drawing.Color.MediumBlue;
             this.label20.Location = new System.Drawing.Point(447, 96);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 13);
+            this.label20.Size = new System.Drawing.Size(49, 11);
             this.label20.TabIndex = 13;
             this.label20.Text = "수강현황";
             // 
@@ -1011,7 +1033,7 @@
             this.label19.ForeColor = System.Drawing.Color.MediumBlue;
             this.label19.Location = new System.Drawing.Point(447, 71);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 13);
+            this.label19.Size = new System.Drawing.Size(49, 11);
             this.label19.TabIndex = 12;
             this.label19.Text = "공학인증";
             // 
@@ -1021,7 +1043,7 @@
             this.label18.ForeColor = System.Drawing.Color.MediumBlue;
             this.label18.Location = new System.Drawing.Point(448, 47);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 13);
+            this.label18.Size = new System.Drawing.Size(49, 11);
             this.label18.TabIndex = 11;
             this.label18.Text = "담당교수";
             // 
@@ -1031,7 +1053,7 @@
             this.label17.ForeColor = System.Drawing.Color.MediumBlue;
             this.label17.Location = new System.Drawing.Point(380, 49);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(33, 13);
+            this.label17.Size = new System.Drawing.Size(27, 11);
             this.label17.TabIndex = 10;
             this.label17.Text = "학점";
             // 
@@ -1041,7 +1063,7 @@
             this.label16.ForeColor = System.Drawing.Color.MediumBlue;
             this.label16.Location = new System.Drawing.Point(267, 49);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 13);
+            this.label16.Size = new System.Drawing.Size(49, 11);
             this.label16.TabIndex = 9;
             this.label16.Text = "이수구분";
             // 
@@ -1051,7 +1073,7 @@
             this.label15.ForeColor = System.Drawing.Color.MediumBlue;
             this.label15.Location = new System.Drawing.Point(186, 22);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 13);
+            this.label15.Size = new System.Drawing.Size(46, 11);
             this.label15.TabIndex = 8;
             this.label15.Text = "과 목 명";
             // 
@@ -1061,7 +1083,7 @@
             this.label14.ForeColor = System.Drawing.Color.MediumBlue;
             this.label14.Location = new System.Drawing.Point(9, 75);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.Size = new System.Drawing.Size(49, 11);
             this.label14.TabIndex = 7;
             this.label14.Text = "강의시간";
             // 
@@ -1071,7 +1093,7 @@
             this.label13.ForeColor = System.Drawing.Color.MediumBlue;
             this.label13.Location = new System.Drawing.Point(10, 48);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.Size = new System.Drawing.Size(46, 11);
             this.label13.TabIndex = 6;
             this.label13.Text = "교 양 군";
             // 
@@ -1081,7 +1103,7 @@
             this.label12.ForeColor = System.Drawing.Color.MediumBlue;
             this.label12.Location = new System.Drawing.Point(9, 22);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.Size = new System.Drawing.Size(49, 11);
             this.label12.TabIndex = 5;
             this.label12.Text = "학정번호";
             // 
@@ -1092,7 +1114,7 @@
             this.label11.ForeColor = System.Drawing.Color.MediumBlue;
             this.label11.Location = new System.Drawing.Point(10, 64);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.Size = new System.Drawing.Size(50, 11);
             this.label11.TabIndex = 6;
             this.label11.Text = "총  신 청";
             // 
@@ -1103,7 +1125,7 @@
             this.label10.ForeColor = System.Drawing.Color.MediumBlue;
             this.label10.Location = new System.Drawing.Point(10, 41);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 13);
+            this.label10.Size = new System.Drawing.Size(49, 11);
             this.label10.TabIndex = 6;
             this.label10.Text = "본교신청";
             // 
@@ -1114,7 +1136,7 @@
             this.label9.ForeColor = System.Drawing.Color.MediumBlue;
             this.label9.Location = new System.Drawing.Point(10, 20);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 13);
+            this.label9.Size = new System.Drawing.Size(49, 11);
             this.label9.TabIndex = 1;
             this.label9.Text = "타교신청";
             // 
@@ -1125,7 +1147,7 @@
             this.label8.ForeColor = System.Drawing.Color.MediumBlue;
             this.label8.Location = new System.Drawing.Point(9, 65);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.Size = new System.Drawing.Size(49, 11);
             this.label8.TabIndex = 2;
             this.label8.Text = "년도학기";
             // 
@@ -1136,7 +1158,7 @@
             this.label7.ForeColor = System.Drawing.Color.MediumBlue;
             this.label7.Location = new System.Drawing.Point(9, 43);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.Size = new System.Drawing.Size(51, 11);
             this.label7.TabIndex = 1;
             this.label7.Text = "성      명";
             // 
@@ -1147,7 +1169,7 @@
             this.label6.ForeColor = System.Drawing.Color.MediumBlue;
             this.label6.Location = new System.Drawing.Point(9, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.Size = new System.Drawing.Size(51, 11);
             this.label6.TabIndex = 0;
             this.label6.Text = "학      번";
             // 
@@ -1170,31 +1192,31 @@
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox6.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox6.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox6.Location = new System.Drawing.Point(74, 62);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(53, 22);
+            this.textBox6.Size = new System.Drawing.Size(53, 19);
             this.textBox6.TabIndex = 54;
             // 
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox5.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox5.Location = new System.Drawing.Point(74, 38);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(53, 22);
+            this.textBox5.Size = new System.Drawing.Size(53, 19);
             this.textBox5.TabIndex = 53;
             // 
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox4.Location = new System.Drawing.Point(74, 14);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(53, 22);
+            this.textBox4.Size = new System.Drawing.Size(53, 19);
             this.textBox4.TabIndex = 52;
             // 
             // groupBox4
@@ -1216,31 +1238,31 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox3.Location = new System.Drawing.Point(74, 15);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(92, 22);
+            this.textBox3.Size = new System.Drawing.Size(92, 19);
             this.textBox3.TabIndex = 53;
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox2.Location = new System.Drawing.Point(74, 37);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(92, 22);
+            this.textBox2.Size = new System.Drawing.Size(92, 19);
             this.textBox2.TabIndex = 52;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.Location = new System.Drawing.Point(74, 61);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(92, 22);
+            this.textBox1.Size = new System.Drawing.Size(92, 19);
             this.textBox1.TabIndex = 51;
             // 
             // groupBox7
@@ -1268,61 +1290,61 @@
             // textBox16
             // 
             this.textBox16.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox16.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox16.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox16.Location = new System.Drawing.Point(532, 19);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(237, 22);
+            this.textBox16.Size = new System.Drawing.Size(237, 19);
             this.textBox16.TabIndex = 60;
             // 
             // textBox15
             // 
             this.textBox15.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox15.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox15.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox15.Location = new System.Drawing.Point(441, 21);
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(32, 22);
+            this.textBox15.Size = new System.Drawing.Size(32, 19);
             this.textBox15.TabIndex = 59;
             // 
             // textBox14
             // 
             this.textBox14.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox14.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox14.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox14.Location = new System.Drawing.Point(368, 21);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(32, 22);
+            this.textBox14.Size = new System.Drawing.Size(32, 19);
             this.textBox14.TabIndex = 58;
             // 
             // textBox13
             // 
             this.textBox13.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox13.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox13.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox13.Location = new System.Drawing.Point(295, 22);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(36, 22);
+            this.textBox13.Size = new System.Drawing.Size(36, 19);
             this.textBox13.TabIndex = 57;
             // 
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox9.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox9.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox9.Location = new System.Drawing.Point(77, 22);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(32, 22);
+            this.textBox9.Size = new System.Drawing.Size(32, 19);
             this.textBox9.TabIndex = 56;
             // 
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox7.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox7.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox7.Location = new System.Drawing.Point(171, 21);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(57, 22);
+            this.textBox7.Size = new System.Drawing.Size(57, 19);
             this.textBox7.TabIndex = 55;
             // 
             // label27
@@ -1331,7 +1353,7 @@
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label27.Location = new System.Drawing.Point(480, 28);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(46, 13);
+            this.label27.Size = new System.Drawing.Size(38, 11);
             this.label27.TabIndex = 17;
             this.label27.Text = "과목명";
             // 
@@ -1341,7 +1363,7 @@
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label26.Location = new System.Drawing.Point(409, 27);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(33, 13);
+            this.label26.Size = new System.Drawing.Size(27, 11);
             this.label26.TabIndex = 15;
             this.label26.Text = "등급";
             // 
@@ -1351,7 +1373,7 @@
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label25.Location = new System.Drawing.Point(337, 28);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(33, 13);
+            this.label25.Size = new System.Drawing.Size(27, 11);
             this.label25.TabIndex = 13;
             this.label25.Text = "학점";
             // 
@@ -1361,7 +1383,7 @@
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label24.Location = new System.Drawing.Point(234, 28);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(59, 13);
+            this.label24.Size = new System.Drawing.Size(49, 11);
             this.label24.TabIndex = 11;
             this.label24.Text = "이수구분";
             // 
@@ -1371,7 +1393,7 @@
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label23.Location = new System.Drawing.Point(113, 28);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(59, 13);
+            this.label23.Size = new System.Drawing.Size(49, 11);
             this.label23.TabIndex = 9;
             this.label23.Text = "년도학기";
             // 
@@ -1381,7 +1403,7 @@
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label22.Location = new System.Drawing.Point(7, 28);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(72, 13);
+            this.label22.Size = new System.Drawing.Size(60, 11);
             this.label22.TabIndex = 0;
             this.label22.Text = "재수강대상";
             // 
@@ -1431,10 +1453,10 @@
             // 
             this.curTime.AutoSize = true;
             this.curTime.BackColor = System.Drawing.Color.Transparent;
-            this.curTime.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.curTime.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.curTime.Location = new System.Drawing.Point(161, 45);
             this.curTime.Name = "curTime";
-            this.curTime.Size = new System.Drawing.Size(65, 15);
+            this.curTime.Size = new System.Drawing.Size(49, 12);
             this.curTime.TabIndex = 14;
             this.curTime.Text = "00:00:00";
             // 
@@ -1442,23 +1464,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(161, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 15);
+            this.label1.Size = new System.Drawing.Size(49, 12);
             this.label1.TabIndex = 13;
             this.label1.Text = "00:00:00";
             // 
             // textBox26
             // 
             this.textBox26.BackColor = System.Drawing.Color.White;
-            this.textBox26.Font = new System.Drawing.Font("Gulim", 8F);
+            this.textBox26.Font = new System.Drawing.Font("굴림", 8F);
             this.textBox26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.textBox26.Location = new System.Drawing.Point(154, 41);
             this.textBox26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox26.Name = "textBox26";
             this.textBox26.ReadOnly = true;
-            this.textBox26.Size = new System.Drawing.Size(79, 23);
+            this.textBox26.Size = new System.Drawing.Size(79, 20);
             this.textBox26.TabIndex = 42;
             this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1476,13 +1498,13 @@
             // textBox25
             // 
             this.textBox25.BackColor = System.Drawing.Color.White;
-            this.textBox25.Font = new System.Drawing.Font("Gulim", 8F);
+            this.textBox25.Font = new System.Drawing.Font("굴림", 8F);
             this.textBox25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.textBox25.Location = new System.Drawing.Point(154, 12);
             this.textBox25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox25.Name = "textBox25";
             this.textBox25.ReadOnly = true;
-            this.textBox25.Size = new System.Drawing.Size(79, 23);
+            this.textBox25.Size = new System.Drawing.Size(79, 20);
             this.textBox25.TabIndex = 41;
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1492,7 +1514,7 @@
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label31.Location = new System.Drawing.Point(238, 45);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(201, 13);
+            this.label31.Size = new System.Drawing.Size(170, 11);
             this.label31.TabIndex = 22;
             this.label31.Text = "수강신청 가능상태로 전환됩니다.\r\n";
             // 
@@ -1502,7 +1524,7 @@
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label30.Location = new System.Drawing.Point(238, 17);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(253, 13);
+            this.label30.Size = new System.Drawing.Size(215, 11);
             this.label30.TabIndex = 21;
             this.label30.Text = "시작시간과 서버시간이 같아지면 자동으로\r\n";
             // 
@@ -1512,7 +1534,7 @@
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label29.Location = new System.Drawing.Point(93, 46);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(59, 13);
+            this.label29.Size = new System.Drawing.Size(49, 11);
             this.label29.TabIndex = 20;
             this.label29.Text = "서버시간";
             // 
@@ -1522,7 +1544,7 @@
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label28.Location = new System.Drawing.Point(93, 18);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(59, 13);
+            this.label28.Size = new System.Drawing.Size(49, 11);
             this.label28.TabIndex = 19;
             this.label28.Text = "시작시간";
             // 
@@ -1546,7 +1568,7 @@
             this.github_link.AutoSize = true;
             this.github_link.Location = new System.Drawing.Point(136, 56);
             this.github_link.Name = "github_link";
-            this.github_link.Size = new System.Drawing.Size(263, 13);
+            this.github_link.Size = new System.Drawing.Size(232, 11);
             this.github_link.TabIndex = 47;
             this.github_link.TabStop = true;
             this.github_link.Text = "https://github.com/3911237/team_project";
@@ -1566,7 +1588,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(158, 56);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(0, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(0, 11);
             this.linkLabel1.TabIndex = 2;
             // 
             // label33
@@ -1575,7 +1597,7 @@
             this.label33.ForeColor = System.Drawing.Color.Teal;
             this.label33.Location = new System.Drawing.Point(13, 56);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(134, 13);
+            this.label33.Size = new System.Drawing.Size(120, 11);
             this.label33.TabIndex = 1;
             this.label33.Text = "*      GitHub 저장소 : ";
             // 
@@ -1585,13 +1607,13 @@
             this.label32.ForeColor = System.Drawing.Color.Teal;
             this.label32.Location = new System.Drawing.Point(13, 28);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(512, 13);
+            this.label32.Size = new System.Drawing.Size(441, 11);
             this.label32.TabIndex = 0;
             this.label32.Text = "*  즐겨찾기 수강신청 :  과목 선택 => 해당과목 선택(클릭) => 즐겨찾기 추가 버튼(클릭)";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 10F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Window;
@@ -1613,7 +1635,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox9);
-            this.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";

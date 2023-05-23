@@ -22,3 +22,27 @@ D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment P
 D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
 D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.exe
 D:\KWANGWOON UNIVERSITY\2023 1st sem\응용소프트웨어\Kwangwoon Enrolment Practice Program\obj\Debug\Kwangwoon Sugang Practice Project.pdb
+C:\Users\1237\Desktop\team_project-main\bin\Debug\Kwangwoon Sugang Practice Project.exe.config
+C:\Users\1237\Desktop\team_project-main\bin\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\1237\Desktop\team_project-main\bin\Debug\Kwangwoon Sugang Practice Project.pdb
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon Sugang Practice Project.csproj.AssemblyReference.cache
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon Sugang Practice Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form1.resources
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form2.resources
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon_Sugang_Practice_Project.Properties.Resources.resources
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon Sugang Practice Project.csproj.GenerateResource.cache
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\1237\Desktop\team_project-main\obj\Debug\Kwangwoon Sugang Practice Project.pdb
+C:\Users\1237\team_project\bin\Debug\Kwangwoon Sugang Practice Project.exe.config
+C:\Users\1237\team_project\bin\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\1237\team_project\bin\Debug\Kwangwoon Sugang Practice Project.pdb
+C:\Users\1237\team_project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.AssemblyReference.cache
+C:\Users\1237\team_project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\1237\team_project\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form1.resources
+C:\Users\1237\team_project\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form2.resources
+C:\Users\1237\team_project\obj\Debug\Kwangwoon_Sugang_Practice_Project.Properties.Resources.resources
+C:\Users\1237\team_project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.GenerateResource.cache
+C:\Users\1237\team_project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
+C:\Users\1237\team_project\obj\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\1237\team_project\obj\Debug\Kwangwoon Sugang Practice Project.pdb
