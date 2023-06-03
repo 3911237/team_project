@@ -62,25 +62,19 @@
             this.cmb_dept2 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmb_favNum = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_clist = new System.Windows.Forms.DataGridView();
-            this.clist_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_favclear = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.dgv_favList = new System.Windows.Forms.DataGridView();
             this.tb_avail = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
-            this.typeRef = new System.Windows.Forms.TextBox();
+            this.tb_isu = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
@@ -89,7 +83,7 @@
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.tb_room1 = new System.Windows.Forms.TextBox();
             this.tb_time2 = new System.Windows.Forms.TextBox();
             this.tb_day2 = new System.Windows.Forms.TextBox();
             this.codeRef = new System.Windows.Forms.Label();
@@ -99,7 +93,7 @@
             this.tb_time1 = new System.Windows.Forms.TextBox();
             this.tb_day1 = new System.Windows.Forms.TextBox();
             this.tb_subject = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.tb_type = new System.Windows.Forms.TextBox();
             this.tb_ccode = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -152,14 +146,13 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.btn_start = new System.Windows.Forms.Button();
             this.github_link = new System.Windows.Forms.LinkLabel();
             this.btn_sched = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.btn_start = new System.Windows.Forms.Button();
             this.timer_start = new System.Windows.Forms.Timer(this.components);
-            this.cmb_favNum = new System.Windows.Forms.ComboBox();
             this.fav_add = new System.Windows.Forms.DataGridViewButtonColumn();
             this.fav_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fav_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -167,6 +160,18 @@
             this.fav_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fav_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fav_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_room = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_seat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_seat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_room = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reglist)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -472,6 +477,26 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "즐겨찾기";
             // 
+            // cmb_favNum
+            // 
+            this.cmb_favNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_favNum.FormattingEnabled = true;
+            this.cmb_favNum.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmb_favNum.Location = new System.Drawing.Point(6, 21);
+            this.cmb_favNum.Name = "cmb_favNum";
+            this.cmb_favNum.Size = new System.Drawing.Size(50, 21);
+            this.cmb_favNum.TabIndex = 33;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -533,7 +558,9 @@
             this.clist_subj,
             this.clist_credit,
             this.clist_prof,
-            this.clist_time});
+            this.clist_seat,
+            this.clist_time,
+            this.clist_room});
             this.dgv_clist.Location = new System.Drawing.Point(789, 72);
             this.dgv_clist.MultiSelect = false;
             this.dgv_clist.Name = "dgv_clist";
@@ -555,62 +582,6 @@
             this.dgv_clist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_clist.Size = new System.Drawing.Size(577, 176);
             this.dgv_clist.TabIndex = 35;
-            // 
-            // clist_num
-            // 
-            this.clist_num.HeaderText = "순번";
-            this.clist_num.MinimumWidth = 6;
-            this.clist_num.Name = "clist_num";
-            this.clist_num.ReadOnly = true;
-            this.clist_num.Width = 40;
-            // 
-            // clist_ccode
-            // 
-            this.clist_ccode.HeaderText = "학정번호";
-            this.clist_ccode.MinimumWidth = 6;
-            this.clist_ccode.Name = "clist_ccode";
-            this.clist_ccode.ReadOnly = true;
-            this.clist_ccode.Width = 110;
-            // 
-            // clist_type
-            // 
-            this.clist_type.HeaderText = "구분";
-            this.clist_type.MinimumWidth = 6;
-            this.clist_type.Name = "clist_type";
-            this.clist_type.ReadOnly = true;
-            this.clist_type.Width = 40;
-            // 
-            // clist_subj
-            // 
-            this.clist_subj.HeaderText = "과목명";
-            this.clist_subj.MinimumWidth = 6;
-            this.clist_subj.Name = "clist_subj";
-            this.clist_subj.ReadOnly = true;
-            this.clist_subj.Width = 200;
-            // 
-            // clist_credit
-            // 
-            this.clist_credit.HeaderText = "학점";
-            this.clist_credit.MinimumWidth = 6;
-            this.clist_credit.Name = "clist_credit";
-            this.clist_credit.ReadOnly = true;
-            this.clist_credit.Width = 40;
-            // 
-            // clist_prof
-            // 
-            this.clist_prof.HeaderText = "담당교수";
-            this.clist_prof.MinimumWidth = 6;
-            this.clist_prof.Name = "clist_prof";
-            this.clist_prof.ReadOnly = true;
-            this.clist_prof.Width = 80;
-            // 
-            // clist_time
-            // 
-            this.clist_time.HeaderText = "강의시간";
-            this.clist_time.MinimumWidth = 6;
-            this.clist_time.Name = "clist_time";
-            this.clist_time.ReadOnly = true;
-            this.clist_time.Width = 85;
             // 
             // btn_favclear
             // 
@@ -665,7 +636,10 @@
             this.fav_subj,
             this.fav_credit,
             this.fav_prof,
-            this.fav_time});
+            this.fav_time,
+            this.fav_room,
+            this.fav_seat,
+            this.fav_type});
             this.dgv_favList.Location = new System.Drawing.Point(789, 285);
             this.dgv_favList.MultiSelect = false;
             this.dgv_favList.Name = "dgv_favList";
@@ -710,16 +684,16 @@
             this.textBox27.Size = new System.Drawing.Size(78, 22);
             this.textBox27.TabIndex = 37;
             // 
-            // typeRef
+            // tb_isu
             // 
-            this.typeRef.BackColor = System.Drawing.SystemColors.Window;
-            this.typeRef.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.typeRef.Location = new System.Drawing.Point(325, 40);
-            this.typeRef.Name = "typeRef";
-            this.typeRef.ReadOnly = true;
-            this.typeRef.Size = new System.Drawing.Size(48, 22);
-            this.typeRef.TabIndex = 34;
-            this.typeRef.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_isu.BackColor = System.Drawing.SystemColors.Window;
+            this.tb_isu.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_isu.Location = new System.Drawing.Point(325, 40);
+            this.tb_isu.Name = "tb_isu";
+            this.tb_isu.ReadOnly = true;
+            this.tb_isu.Size = new System.Drawing.Size(48, 22);
+            this.tb_isu.TabIndex = 34;
+            this.tb_isu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox6
             // 
@@ -730,7 +704,7 @@
             this.groupBox6.Controls.Add(this.textBox21);
             this.groupBox6.Controls.Add(this.textBox22);
             this.groupBox6.Controls.Add(this.textBox11);
-            this.groupBox6.Controls.Add(this.textBox12);
+            this.groupBox6.Controls.Add(this.tb_room1);
             this.groupBox6.Controls.Add(this.tb_time2);
             this.groupBox6.Controls.Add(this.tb_day2);
             this.groupBox6.Controls.Add(this.codeRef);
@@ -739,11 +713,11 @@
             this.groupBox6.Controls.Add(this.textBox27);
             this.groupBox6.Controls.Add(this.tb_prof);
             this.groupBox6.Controls.Add(this.tb_credit);
-            this.groupBox6.Controls.Add(this.typeRef);
+            this.groupBox6.Controls.Add(this.tb_isu);
             this.groupBox6.Controls.Add(this.tb_time1);
             this.groupBox6.Controls.Add(this.tb_day1);
             this.groupBox6.Controls.Add(this.tb_subject);
-            this.groupBox6.Controls.Add(this.textBox10);
+            this.groupBox6.Controls.Add(this.tb_type);
             this.groupBox6.Controls.Add(this.tb_ccode);
             this.groupBox6.Controls.Add(this.label21);
             this.groupBox6.Controls.Add(this.textBox8);
@@ -834,15 +808,15 @@
             this.textBox11.Size = new System.Drawing.Size(93, 22);
             this.textBox11.TabIndex = 44;
             // 
-            // textBox12
+            // tb_room1
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox12.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox12.Location = new System.Drawing.Point(195, 68);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(93, 22);
-            this.textBox12.TabIndex = 43;
+            this.tb_room1.BackColor = System.Drawing.SystemColors.Window;
+            this.tb_room1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_room1.Location = new System.Drawing.Point(195, 68);
+            this.tb_room1.Name = "tb_room1";
+            this.tb_room1.ReadOnly = true;
+            this.tb_room1.Size = new System.Drawing.Size(93, 22);
+            this.tb_room1.TabIndex = 43;
             // 
             // tb_time2
             // 
@@ -933,15 +907,15 @@
             this.tb_subject.Size = new System.Drawing.Size(344, 22);
             this.tb_subject.TabIndex = 18;
             // 
-            // textBox10
+            // tb_type
             // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox10.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox10.Location = new System.Drawing.Point(67, 41);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(105, 22);
-            this.textBox10.TabIndex = 17;
+            this.tb_type.BackColor = System.Drawing.SystemColors.Window;
+            this.tb_type.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_type.Location = new System.Drawing.Point(67, 41);
+            this.tb_type.Name = "tb_type";
+            this.tb_type.ReadOnly = true;
+            this.tb_type.Size = new System.Drawing.Size(105, 22);
+            this.tb_type.TabIndex = 17;
             // 
             // tb_ccode
             // 
@@ -1388,7 +1362,8 @@
             // 
             // btn_apply
             // 
-            this.btn_apply.BackColor = System.Drawing.Color.Yellow;
+            this.btn_apply.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_apply.Enabled = false;
             this.btn_apply.Location = new System.Drawing.Point(672, 16);
             this.btn_apply.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_apply.Name = "btn_apply";
@@ -1523,6 +1498,17 @@
             this.groupBox9.TabIndex = 45;
             this.groupBox9.TabStop = false;
             // 
+            // btn_start
+            // 
+            this.btn_start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_start.Location = new System.Drawing.Point(595, 28);
+            this.btn_start.Name = "btn_start";
+            this.btn_start.Size = new System.Drawing.Size(76, 41);
+            this.btn_start.TabIndex = 48;
+            this.btn_start.Text = "연습 시작";
+            this.btn_start.UseVisualStyleBackColor = false;
+            this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
+            // 
             // github_link
             // 
             this.github_link.AutoSize = true;
@@ -1571,41 +1557,10 @@
             this.label32.TabIndex = 0;
             this.label32.Text = "*  즐겨찾기 수강신청 :  과목 선택 => 해당과목 선택(클릭) => 즐겨찾기 추가 버튼(클릭)";
             // 
-            // btn_start
-            // 
-            this.btn_start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_start.Location = new System.Drawing.Point(595, 28);
-            this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(76, 41);
-            this.btn_start.TabIndex = 48;
-            this.btn_start.Text = "연습 시작";
-            this.btn_start.UseVisualStyleBackColor = false;
-            this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
-            // 
             // timer_start
             // 
             this.timer_start.Interval = 1000;
             this.timer_start.Tick += new System.EventHandler(this.timer_start_Tick);
-            // 
-            // cmb_favNum
-            // 
-            this.cmb_favNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_favNum.FormattingEnabled = true;
-            this.cmb_favNum.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cmb_favNum.Location = new System.Drawing.Point(6, 21);
-            this.cmb_favNum.Name = "cmb_favNum";
-            this.cmb_favNum.Size = new System.Drawing.Size(50, 21);
-            this.cmb_favNum.TabIndex = 33;
             // 
             // fav_add
             // 
@@ -1655,6 +1610,103 @@
             this.fav_time.MinimumWidth = 6;
             this.fav_time.Name = "fav_time";
             this.fav_time.Width = 80;
+            // 
+            // fav_room
+            // 
+            this.fav_room.HeaderText = "강의실";
+            this.fav_room.MinimumWidth = 6;
+            this.fav_room.Name = "fav_room";
+            this.fav_room.Visible = false;
+            this.fav_room.Width = 125;
+            // 
+            // fav_seat
+            // 
+            this.fav_seat.HeaderText = "여석";
+            this.fav_seat.MinimumWidth = 6;
+            this.fav_seat.Name = "fav_seat";
+            this.fav_seat.Visible = false;
+            this.fav_seat.Width = 125;
+            // 
+            // fav_type
+            // 
+            this.fav_type.HeaderText = "이수구분";
+            this.fav_type.MinimumWidth = 6;
+            this.fav_type.Name = "fav_type";
+            this.fav_type.Visible = false;
+            this.fav_type.Width = 125;
+            // 
+            // clist_num
+            // 
+            this.clist_num.HeaderText = "순번";
+            this.clist_num.MinimumWidth = 6;
+            this.clist_num.Name = "clist_num";
+            this.clist_num.ReadOnly = true;
+            this.clist_num.Width = 40;
+            // 
+            // clist_ccode
+            // 
+            this.clist_ccode.HeaderText = "학정번호";
+            this.clist_ccode.MinimumWidth = 6;
+            this.clist_ccode.Name = "clist_ccode";
+            this.clist_ccode.ReadOnly = true;
+            this.clist_ccode.Width = 110;
+            // 
+            // clist_type
+            // 
+            this.clist_type.HeaderText = "구분";
+            this.clist_type.MinimumWidth = 6;
+            this.clist_type.Name = "clist_type";
+            this.clist_type.ReadOnly = true;
+            this.clist_type.Width = 40;
+            // 
+            // clist_subj
+            // 
+            this.clist_subj.HeaderText = "과목명";
+            this.clist_subj.MinimumWidth = 6;
+            this.clist_subj.Name = "clist_subj";
+            this.clist_subj.ReadOnly = true;
+            this.clist_subj.Width = 200;
+            // 
+            // clist_credit
+            // 
+            this.clist_credit.HeaderText = "학점";
+            this.clist_credit.MinimumWidth = 6;
+            this.clist_credit.Name = "clist_credit";
+            this.clist_credit.ReadOnly = true;
+            this.clist_credit.Width = 40;
+            // 
+            // clist_prof
+            // 
+            this.clist_prof.HeaderText = "담당교수";
+            this.clist_prof.MinimumWidth = 6;
+            this.clist_prof.Name = "clist_prof";
+            this.clist_prof.ReadOnly = true;
+            this.clist_prof.Width = 80;
+            // 
+            // clist_seat
+            // 
+            this.clist_seat.HeaderText = "여석";
+            this.clist_seat.MinimumWidth = 6;
+            this.clist_seat.Name = "clist_seat";
+            this.clist_seat.ReadOnly = true;
+            this.clist_seat.Width = 50;
+            // 
+            // clist_time
+            // 
+            this.clist_time.HeaderText = "강의시간";
+            this.clist_time.MinimumWidth = 6;
+            this.clist_time.Name = "clist_time";
+            this.clist_time.ReadOnly = true;
+            this.clist_time.Width = 85;
+            // 
+            // clist_room
+            // 
+            this.clist_room.HeaderText = "강의실";
+            this.clist_room.MinimumWidth = 6;
+            this.clist_room.Name = "clist_room";
+            this.clist_room.ReadOnly = true;
+            this.clist_room.Visible = false;
+            this.clist_room.Width = 125;
             // 
             // Form2
             // 
@@ -1737,7 +1789,7 @@
         private System.Windows.Forms.DataGridView dgv_favList;
         private System.Windows.Forms.TextBox tb_avail;
         private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox typeRef;
+        private System.Windows.Forms.TextBox tb_isu;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label codeRef;
         private System.Windows.Forms.Label cntRef;
@@ -1746,7 +1798,7 @@
         private System.Windows.Forms.TextBox tb_time1;
         private System.Windows.Forms.TextBox tb_day1;
         private System.Windows.Forms.TextBox tb_subject;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tb_type;
         private System.Windows.Forms.TextBox tb_ccode;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox8;
@@ -1779,13 +1831,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn reg_day2;
         private System.Windows.Forms.DataGridViewTextBoxColumn reg_time2;
         private System.Windows.Forms.DataGridViewTextBoxColumn reg_room2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clist_num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clist_ccode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clist_type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clist_subj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clist_credit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clist_prof;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clist_time;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
@@ -1800,7 +1845,7 @@
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox tb_room1;
         private System.Windows.Forms.TextBox tb_time2;
         private System.Windows.Forms.TextBox tb_day2;
         private System.Windows.Forms.GroupBox groupBox8;
@@ -1843,5 +1888,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fav_credit;
         private System.Windows.Forms.DataGridViewTextBoxColumn fav_prof;
         private System.Windows.Forms.DataGridViewTextBoxColumn fav_time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_room;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_seat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_ccode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_subj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_credit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_prof;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_seat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clist_room;
     }
 }

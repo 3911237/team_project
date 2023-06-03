@@ -47,7 +47,7 @@
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.BackgroundImage = global::Kwangwoon_Sugang_Practice_Project.Properties.Resources.opening;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(500, 273);
+            this.ClientSize = new System.Drawing.Size(490, 280);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
