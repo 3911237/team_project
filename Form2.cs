@@ -13,9 +13,27 @@ namespace Kwangwoon_Sugang_Practice_Project
 {
     public partial class Form2 : Form
     {
+        int sec = 50;
+        bool isStarted=false;//수강신청 시작했는지
+        int selected = -1;//즐찾에서 조회버튼 누를때
+        List<bool> done = new List<bool>();//수강신청한 과목들
+        List<bool> full = new List<bool>();//여석이 다 찼는 지
+        int num=0;//몇개의 수강신청 신청했는 지
         public Form2()
         {
             InitializeComponent();
+            dgv_favList.Rows.Add("조회", "1", "", "","","","","","","","");
+            dgv_favList.Rows.Add("조회", "2", "", "", "", "", "","", "", "", "");
+            dgv_favList.Rows.Add("조회", "3", "", "", "", "", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "4", "", "", "", "", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "5", "", "", "", "", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "6", "", "", "", "", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "7", "", "", "", "", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "8", "", "", "", "", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "9", "", "", "", "", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "10", "", "", "", "", "", "", "", "", "");
+
+
         }
         int k = 1;
 
@@ -26,7 +44,8 @@ namespace Kwangwoon_Sugang_Practice_Project
 
         private void btn_end_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
         }
 
         private void cmb_dept1_SelectedIndexChanged(object sender, EventArgs e)
@@ -377,9 +396,146 @@ namespace Kwangwoon_Sugang_Practice_Project
                         continue;
                 if (!(data[2].Contains(tb_csearch.Text)))
                     continue;
-                dgv_clist.Rows.Add(k, data[0], data[1], data[2], data[3], data[4], data[6]);
+                if (cb_avail.Checked)
+                    if (data[5] == "0") continue;
+                if (isStarted)//랜덤으로 줄어듦
+                    Randomseats((Convert.ToInt32(data[5])));
+                    //data[5]=(Convert.ToInt32(data[5])-random.Next()).ToString();
+                dgv_clist.Rows.Add(k, data[0], data[1], data[2], data[3], data[4], data[5],data[6]);
                 k++;
             }
+        }
+
+        private void btn_apply_Click(object sender, EventArgs e)
+        {
+            if (selected == -1)
+            {
+                MessageBox.Show("수강신청하려는 과목을 먼저 조회해주세요!", "오류", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+/*            else if (done[selected])
+            {
+                MessageBox.Show("이미 수강신청이 완료된 과목입니다!", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (full[selected])
+            {
+                MessageBox.Show("해당 과목은 만석입니다", "여석 없음", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+*/            //dgv_reglist에 추가하는 부분
+            dgv_reglist.Rows.Add((++num).ToString(),tb_ccode.Text,tb_type.Text,tb_subject.Text,tb_credit.Text,tb_prof.Text,tb_day1.Text,tb_time1.Text+"교시",tb_room1.Text,"","","");
+            dgv_reglist.CurrentCell = null;
+            clearing();
+            //done[selected] = true;
+            this.Text = "수강신청 성공 과목 수 [" + num.ToString() + "/" + "10" + "]";
+            selected = -1;
+
+        }
+        void clearing()
+        {
+            tb_ccode.Text = null;
+            tb_type.Text = null;
+            tb_subject.Text = null;
+            tb_credit.Text = null;
+            tb_prof.Text = null;
+            tb_day1.Text = null;
+            tb_time1.Text = null;
+            tb_day2.Text = null;
+            tb_time2.Text = null;
+            tb_room1.Text = null;
+        }
+
+        private void btn_start_Click(object sender, EventArgs e)//수강 신청 버튼 눌렀을 때
+        {
+            btn_start.Enabled = false;
+            MessageBox.Show("10초 후 수강신청이 시작됩니다.\n서버 시간을 확인해주세요!","수강신청 시작",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            timer_start.Enabled = true;
+        }
+
+        private void timer_start_Tick(object sender, EventArgs e)
+        {
+            sec++;
+            if(sec==55)curTime.ForeColor=Color.Red;
+            else if (sec == 60)
+            {
+                timer_start.Enabled=false;
+                curTime.Text = "10:00:00";
+                //랜덤 여석 차기 구현 필요
+                //practiceStart()
+                isStarted = true;
+                btn_apply.Enabled = true;
+                btn_apply.BackColor = Color.Yellow;
+                MessageBox.Show("수강신청이 시작되었습니다.","수강신청 시작",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                //Randomseats();//랜덤 여석줄어들기 구현
+                return;
+            }
+            curTime.Text="09:59:"+sec.ToString();//시간 update
+        }
+        private void Randomseats(int n)//랜덤 여석줄어들기 구현
+        {
+            //data[5]=(Convert.ToInt32(data[5])-random.Next()).ToString();
+            Random random = new Random();
+
+        }
+
+        private void btn_favadd_Click(object sender, EventArgs e)//즐찾에 추가하는 기능
+        {
+            DataGridViewRow row = dgv_clist.SelectedRows[0]; //선택된 Row 값 가져옴.
+            String add_fav_num = cmb_favNum.SelectedItem as String;
+            String add_fav_ccode = row.Cells[1].Value.ToString();//학점번호
+            String add_fav_type = row.Cells[2].Value.ToString();//구분
+            String add_fav_subj = row.Cells[3].Value.ToString();//과목명
+            String add_fav_credit=row.Cells[4].Value.ToString();//학점
+            String add_fav_prof=row.Cells[5].Value.ToString();//교수
+            String add_fav_seat = row.Cells[6].Value.ToString();//여석
+            String add_fav_time =row.Cells[7].Value.ToString();//강의시간
+            String add_fav_room = "";//강의실
+            int index = Convert.ToInt32( cmb_favNum.SelectedItem)-1;
+
+            //MessageBox.Show(add_fav_num+ add_fav_ccode+add_fav_subj+add_fav_credit+ add_fav_prof+ add_fav_time+"\n"+ index);
+            dgv_favList.Rows[index].Cells[2].Value = add_fav_ccode.ToString();
+            dgv_favList.Rows[index].Cells[3].Value = add_fav_subj.ToString();
+            dgv_favList.Rows[index].Cells[4].Value = add_fav_credit.ToString();
+            dgv_favList.Rows[index].Cells[5].Value = add_fav_prof.ToString();
+            dgv_favList.Rows[index].Cells[6].Value = add_fav_time.ToString();
+            dgv_favList.Rows[index].Cells[7].Value = add_fav_room.ToString();//강의실
+            dgv_favList.Rows[index].Cells[8].Value = add_fav_seat.ToString();//여석
+            dgv_favList.Rows[index].Cells[9].Value = add_fav_type.ToString();//구분
+
+        }
+
+        private void dgv_favList_CellContentClick(object sender, DataGridViewCellEventArgs e)//조회 버튼 눌렀을 때
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex != dgv_favList.Columns["fav_add"].Index) return;
+            if (!isStarted)//수강 신청 시작하면 조회 가능
+            {
+                MessageBox.Show("수강신청이 시작된 이후에만 조회가 가능합니다.", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            //String[] typeList = new String[6] { "기필", "기선", "교필", "교선", "전필", "전선" };
+
+            selected = e.RowIndex;
+            tb_ccode.Text=dgv_favList.Rows[e.RowIndex].Cells[2].Value as String;
+            tb_subject.Text = dgv_favList.Rows[e.RowIndex].Cells[3].Value as String;
+            tb_credit.Text= dgv_favList.Rows[e.RowIndex].Cells[4].Value as String;
+            tb_prof.Text= dgv_favList.Rows[e.RowIndex].Cells[5].Value as String;
+            tb_day1.Text=dgv_favList.Rows[e.RowIndex].Cells[6].Value as String;//시간 splite 처리 필요
+            tb_room1.Text=dgv_favList.Rows[e.RowIndex].Cells[7].Value as String;
+            tb_avail.Text = (dgv_favList.Rows[e.RowIndex].Cells[8].Value as String=="0")?"만석":"여석";
+            tb_type.Text= dgv_favList.Rows[e.RowIndex].Cells[9].Value as String;
+
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_favclear_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgv_favList.SelectedRows[0]; //선택된 Row 값 가져옴.
+            row.SetValues("조회", row.Cells[1].Value.ToString(), "", "", "", "", "", "", "", "", "");
         }
     }
 }
