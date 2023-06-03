@@ -72,6 +72,16 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.dgv_favList = new System.Windows.Forms.DataGridView();
+            this.fav_add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.fav_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_room = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_seat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tb_avail = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.tb_isu = new System.Windows.Forms.TextBox();
@@ -153,16 +163,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.timer_start = new System.Windows.Forms.Timer(this.components);
-            this.fav_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.fav_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_room = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_seat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clist_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clist_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clist_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -592,6 +592,7 @@
             this.btn_favclear.TabIndex = 36;
             this.btn_favclear.Text = "삭제";
             this.btn_favclear.UseVisualStyleBackColor = true;
+            this.btn_favclear.Click += new System.EventHandler(this.btn_favclear_Click);
             // 
             // groupBox10
             // 
@@ -661,6 +662,79 @@
             this.dgv_favList.Size = new System.Drawing.Size(577, 339);
             this.dgv_favList.TabIndex = 38;
             this.dgv_favList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_favList_CellContentClick);
+            // 
+            // fav_add
+            // 
+            this.fav_add.HeaderText = "";
+            this.fav_add.MinimumWidth = 6;
+            this.fav_add.Name = "fav_add";
+            this.fav_add.Width = 50;
+            // 
+            // fav_num
+            // 
+            this.fav_num.HeaderText = "순번";
+            this.fav_num.MinimumWidth = 6;
+            this.fav_num.Name = "fav_num";
+            this.fav_num.Width = 40;
+            // 
+            // fav_ccode
+            // 
+            this.fav_ccode.HeaderText = "학정번호";
+            this.fav_ccode.MinimumWidth = 6;
+            this.fav_ccode.Name = "fav_ccode";
+            this.fav_ccode.Width = 115;
+            // 
+            // fav_subj
+            // 
+            this.fav_subj.HeaderText = "과목명";
+            this.fav_subj.MinimumWidth = 6;
+            this.fav_subj.Name = "fav_subj";
+            this.fav_subj.Width = 200;
+            // 
+            // fav_credit
+            // 
+            this.fav_credit.HeaderText = "학점";
+            this.fav_credit.MinimumWidth = 6;
+            this.fav_credit.Name = "fav_credit";
+            this.fav_credit.Width = 40;
+            // 
+            // fav_prof
+            // 
+            this.fav_prof.HeaderText = "담당교수";
+            this.fav_prof.MinimumWidth = 6;
+            this.fav_prof.Name = "fav_prof";
+            this.fav_prof.Width = 75;
+            // 
+            // fav_time
+            // 
+            this.fav_time.HeaderText = "강의시간";
+            this.fav_time.MinimumWidth = 6;
+            this.fav_time.Name = "fav_time";
+            this.fav_time.Width = 80;
+            // 
+            // fav_room
+            // 
+            this.fav_room.HeaderText = "강의실";
+            this.fav_room.MinimumWidth = 6;
+            this.fav_room.Name = "fav_room";
+            this.fav_room.Visible = false;
+            this.fav_room.Width = 125;
+            // 
+            // fav_seat
+            // 
+            this.fav_seat.HeaderText = "여석";
+            this.fav_seat.MinimumWidth = 6;
+            this.fav_seat.Name = "fav_seat";
+            this.fav_seat.Visible = false;
+            this.fav_seat.Width = 125;
+            // 
+            // fav_type
+            // 
+            this.fav_type.HeaderText = "이수구분";
+            this.fav_type.MinimumWidth = 6;
+            this.fav_type.Name = "fav_type";
+            this.fav_type.Visible = false;
+            this.fav_type.Width = 125;
             // 
             // tb_avail
             // 
@@ -1562,79 +1636,6 @@
             this.timer_start.Interval = 1000;
             this.timer_start.Tick += new System.EventHandler(this.timer_start_Tick);
             // 
-            // fav_add
-            // 
-            this.fav_add.HeaderText = "";
-            this.fav_add.MinimumWidth = 6;
-            this.fav_add.Name = "fav_add";
-            this.fav_add.Width = 50;
-            // 
-            // fav_num
-            // 
-            this.fav_num.HeaderText = "순번";
-            this.fav_num.MinimumWidth = 6;
-            this.fav_num.Name = "fav_num";
-            this.fav_num.Width = 40;
-            // 
-            // fav_ccode
-            // 
-            this.fav_ccode.HeaderText = "학정번호";
-            this.fav_ccode.MinimumWidth = 6;
-            this.fav_ccode.Name = "fav_ccode";
-            this.fav_ccode.Width = 115;
-            // 
-            // fav_subj
-            // 
-            this.fav_subj.HeaderText = "과목명";
-            this.fav_subj.MinimumWidth = 6;
-            this.fav_subj.Name = "fav_subj";
-            this.fav_subj.Width = 200;
-            // 
-            // fav_credit
-            // 
-            this.fav_credit.HeaderText = "학점";
-            this.fav_credit.MinimumWidth = 6;
-            this.fav_credit.Name = "fav_credit";
-            this.fav_credit.Width = 40;
-            // 
-            // fav_prof
-            // 
-            this.fav_prof.HeaderText = "담당교수";
-            this.fav_prof.MinimumWidth = 6;
-            this.fav_prof.Name = "fav_prof";
-            this.fav_prof.Width = 75;
-            // 
-            // fav_time
-            // 
-            this.fav_time.HeaderText = "강의시간";
-            this.fav_time.MinimumWidth = 6;
-            this.fav_time.Name = "fav_time";
-            this.fav_time.Width = 80;
-            // 
-            // fav_room
-            // 
-            this.fav_room.HeaderText = "강의실";
-            this.fav_room.MinimumWidth = 6;
-            this.fav_room.Name = "fav_room";
-            this.fav_room.Visible = false;
-            this.fav_room.Width = 125;
-            // 
-            // fav_seat
-            // 
-            this.fav_seat.HeaderText = "여석";
-            this.fav_seat.MinimumWidth = 6;
-            this.fav_seat.Name = "fav_seat";
-            this.fav_seat.Visible = false;
-            this.fav_seat.Width = 125;
-            // 
-            // fav_type
-            // 
-            this.fav_type.HeaderText = "이수구분";
-            this.fav_type.MinimumWidth = 6;
-            this.fav_type.Name = "fav_type";
-            this.fav_type.Visible = false;
-            this.fav_type.Width = 125;
-            // 
             // clist_num
             // 
             this.clist_num.HeaderText = "순번";
@@ -1689,7 +1690,7 @@
             this.clist_seat.MinimumWidth = 6;
             this.clist_seat.Name = "clist_seat";
             this.clist_seat.ReadOnly = true;
-            this.clist_seat.Width = 50;
+            this.clist_seat.Width = 55;
             // 
             // clist_time
             // 

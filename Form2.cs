@@ -19,7 +19,6 @@ namespace Kwangwoon_Sugang_Practice_Project
         List<bool> done = new List<bool>();//수강신청한 과목들
         List<bool> full = new List<bool>();//여석이 다 찼는 지
         int num=0;//몇개의 수강신청 신청했는 지
-
         public Form2()
         {
             InitializeComponent();
@@ -397,6 +396,11 @@ namespace Kwangwoon_Sugang_Practice_Project
                         continue;
                 if (!(data[2].Contains(tb_csearch.Text)))
                     continue;
+                if (cb_avail.Checked)
+                    if (data[5] == "0") continue;
+                if (isStarted)//랜덤으로 줄어듦
+                    Randomseats((Convert.ToInt32(data[5])));
+                    //data[5]=(Convert.ToInt32(data[5])-random.Next()).ToString();
                 dgv_clist.Rows.Add(k, data[0], data[1], data[2], data[3], data[4], data[5],data[6]);
                 k++;
             }
@@ -430,16 +434,16 @@ namespace Kwangwoon_Sugang_Practice_Project
         }
         void clearing()
         {
-            tb_ccode = null;
-            tb_type = null;
-            tb_subject = null;
-            tb_credit=null;
-            tb_prof = null;
-            tb_day1 = null;
-            tb_time1 = null;
-            tb_day2 = null;
-            tb_time2 = null;
-            tb_room1 = null;
+            tb_ccode.Text = null;
+            tb_type.Text = null;
+            tb_subject.Text = null;
+            tb_credit.Text = null;
+            tb_prof.Text = null;
+            tb_day1.Text = null;
+            tb_time1.Text = null;
+            tb_day2.Text = null;
+            tb_time2.Text = null;
+            tb_room1.Text = null;
         }
 
         private void btn_start_Click(object sender, EventArgs e)//수강 신청 버튼 눌렀을 때
@@ -463,9 +467,16 @@ namespace Kwangwoon_Sugang_Practice_Project
                 btn_apply.Enabled = true;
                 btn_apply.BackColor = Color.Yellow;
                 MessageBox.Show("수강신청이 시작되었습니다.","수강신청 시작",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                //Randomseats();//랜덤 여석줄어들기 구현
                 return;
             }
             curTime.Text="09:59:"+sec.ToString();//시간 update
+        }
+        private void Randomseats(int n)//랜덤 여석줄어들기 구현
+        {
+            //data[5]=(Convert.ToInt32(data[5])-random.Next()).ToString();
+            Random random = new Random();
+
         }
 
         private void btn_favadd_Click(object sender, EventArgs e)//즐찾에 추가하는 기능
@@ -492,10 +503,6 @@ namespace Kwangwoon_Sugang_Practice_Project
             dgv_favList.Rows[index].Cells[8].Value = add_fav_seat.ToString();//여석
             dgv_favList.Rows[index].Cells[9].Value = add_fav_type.ToString();//구분
 
-
-
-
-
         }
 
         private void dgv_favList_CellContentClick(object sender, DataGridViewCellEventArgs e)//조회 버튼 눌렀을 때
@@ -506,7 +513,7 @@ namespace Kwangwoon_Sugang_Practice_Project
                 MessageBox.Show("수강신청이 시작된 이후에만 조회가 가능합니다.", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            String[] typeList = new String[6] { "기필", "기선", "교필", "교선", "전필", "전선" };
+            //String[] typeList = new String[6] { "기필", "기선", "교필", "교선", "전필", "전선" };
 
             selected = e.RowIndex;
             tb_ccode.Text=dgv_favList.Rows[e.RowIndex].Cells[2].Value as String;
@@ -523,6 +530,12 @@ namespace Kwangwoon_Sugang_Practice_Project
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_favclear_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgv_favList.SelectedRows[0]; //선택된 Row 값 가져옴.
+            row.SetValues("조회", row.Cells[1].Value.ToString(), "", "", "", "", "", "", "", "", "");
         }
     }
 }
