@@ -13,6 +13,9 @@ namespace Kwangwoon_Sugang_Practice_Project
 {
     public partial class Form2 : Form
     {
+        int sec = 50;
+        bool isStarted=false;//수강신청 시작했는지
+        int selected = -1;//즐찾에서 조회버튼 누를때
         public Form2()
         {
             InitializeComponent();
@@ -26,7 +29,8 @@ namespace Kwangwoon_Sugang_Practice_Project
 
         private void btn_end_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
         }
 
         private void cmb_dept1_SelectedIndexChanged(object sender, EventArgs e)
@@ -380,6 +384,34 @@ namespace Kwangwoon_Sugang_Practice_Project
                 dgv_clist.Rows.Add(k, data[0], data[1], data[2], data[3], data[4], data[6]);
                 k++;
             }
+        }
+
+        private void btn_apply_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_start_Click(object sender, EventArgs e)//수강 신청 버튼 눌렀을 때
+        {
+            btn_start.Enabled = false;
+            MessageBox.Show("10초 후 수강신청이 시작됩니다.\n서버 시간을 확인해주세요!","수강신청 시작",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            timer_start.Enabled = true;
+        }
+
+        private void timer_start_Tick(object sender, EventArgs e)
+        {
+            sec++;
+            if(sec==55)curTime.ForeColor=Color.Red;
+            else if (sec == 60)
+            {
+                timer_start.Enabled=false;
+                curTime.Text = "10:00:00";
+                //랜덤 여석 차기 구현 필요
+                //practiceStart()
+                MessageBox.Show("수강신청이 시작되었습니다.","수강신청 시작",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+            }
+            curTime.Text="09:59:"+sec.ToString();//시간 update
         }
     }
 }
