@@ -19,6 +19,18 @@ namespace Kwangwoon_Sugang_Practice_Project
         public Form2()
         {
             InitializeComponent();
+            dgv_favList.Rows.Add("조회", "1", "", "","","","");
+            dgv_favList.Rows.Add("조회", "2", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "3", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "4", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "5", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "6", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "7", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "8", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "9", "", "", "", "", "");
+            dgv_favList.Rows.Add("조회", "10", "", "", "", "", "");
+
+
         }
         int k = 1;
 
@@ -412,6 +424,43 @@ namespace Kwangwoon_Sugang_Practice_Project
                 return;
             }
             curTime.Text="09:59:"+sec.ToString();//시간 update
+        }
+
+        private void btn_favadd_Click(object sender, EventArgs e)//즐찾에 추가하는 기능
+        {
+            DataGridViewRow row = dgv_clist.SelectedRows[0]; //선택된 Row 값 가져옴.
+            String add_fav_num = cmb_favNum.SelectedItem as String;
+            String add_fav_ccode = row.Cells[1].Value.ToString();
+            String add_fav_subj = row.Cells[3].Value.ToString();
+            String add_fav_credit=row.Cells[4].Value.ToString();
+            String add_fav_prof=row.Cells[5].Value.ToString();
+            String add_fav_time=row.Cells[6].Value.ToString();
+            int index = Convert.ToInt32( cmb_favNum.SelectedItem)-1;
+
+            //MessageBox.Show(add_fav_num+ add_fav_ccode+add_fav_subj+add_fav_credit+ add_fav_prof+ add_fav_time+"\n"+ index);
+            dgv_favList.Rows[index].Cells[2].Value = add_fav_ccode.ToString();
+            dgv_favList.Rows[index].Cells[3].Value = add_fav_subj.ToString();
+            dgv_favList.Rows[index].Cells[4].Value = add_fav_credit.ToString();
+            dgv_favList.Rows[index].Cells[5].Value = add_fav_prof.ToString();
+            dgv_favList.Rows[index].Cells[6].Value = add_fav_time.ToString();
+
+
+        }
+
+        private void dgv_favList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex != dgv_favList.Columns["fav_add"].Index) return;
+            if (!isStarted)//수강 신청 시작하면 조회 가능
+            {
+                MessageBox.Show("수강신청이 시작된 이후에만 조회가 가능합니다.", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            //dgv_reglist에 추가하는 부분
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

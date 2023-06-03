@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_reglist = new System.Windows.Forms.DataGridView();
@@ -78,13 +78,6 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
             this.dgv_favList = new System.Windows.Forms.DataGridView();
-            this.fav_add = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.fav_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tb_avail = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.typeRef = new System.Windows.Forms.TextBox();
@@ -166,6 +159,14 @@
             this.label32 = new System.Windows.Forms.Label();
             this.btn_start = new System.Windows.Forms.Button();
             this.timer_start = new System.Windows.Forms.Timer(this.components);
+            this.cmb_favNum = new System.Windows.Forms.ComboBox();
+            this.fav_add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.fav_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fav_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reglist)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -197,14 +198,14 @@
             // 
             this.dgv_reglist.AllowUserToAddRows = false;
             this.dgv_reglist.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_reglist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_reglist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_reglist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_reglist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.reg_num,
@@ -223,18 +224,18 @@
             this.dgv_reglist.MultiSelect = false;
             this.dgv_reglist.Name = "dgv_reglist";
             this.dgv_reglist.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_reglist.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_reglist.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_reglist.RowHeadersVisible = false;
             this.dgv_reglist.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_reglist.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_reglist.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_reglist.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Cyan;
             this.dgv_reglist.RowTemplate.Height = 45;
             this.dgv_reglist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -373,12 +374,13 @@
             // btn_favadd
             // 
             this.btn_favadd.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_favadd.Location = new System.Drawing.Point(10, 15);
+            this.btn_favadd.Location = new System.Drawing.Point(61, 16);
             this.btn_favadd.Name = "btn_favadd";
-            this.btn_favadd.Size = new System.Drawing.Size(91, 28);
+            this.btn_favadd.Size = new System.Drawing.Size(45, 28);
             this.btn_favadd.TabIndex = 32;
             this.btn_favadd.Text = "추가";
             this.btn_favadd.UseVisualStyleBackColor = true;
+            this.btn_favadd.Click += new System.EventHandler(this.btn_favadd_Click);
             // 
             // btn_search
             // 
@@ -459,6 +461,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.cmb_favNum);
             this.groupBox3.Controls.Add(this.btn_favadd);
             this.groupBox3.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
@@ -514,14 +517,14 @@
             this.dgv_clist.AllowUserToAddRows = false;
             this.dgv_clist.AllowUserToDeleteRows = false;
             this.dgv_clist.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_clist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_clist.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_clist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_clist.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clist_num,
@@ -535,18 +538,18 @@
             this.dgv_clist.MultiSelect = false;
             this.dgv_clist.Name = "dgv_clist";
             this.dgv_clist.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_clist.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_clist.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_clist.RowHeadersVisible = false;
             this.dgv_clist.RowHeadersWidth = 51;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_clist.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_clist.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_clist.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Cyan;
             this.dgv_clist.RowTemplate.Height = 45;
             this.dgv_clist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -646,14 +649,14 @@
             // 
             this.dgv_favList.AllowUserToAddRows = false;
             this.dgv_favList.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_favList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_favList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_favList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_favList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fav_add,
@@ -666,72 +669,24 @@
             this.dgv_favList.Location = new System.Drawing.Point(789, 285);
             this.dgv_favList.MultiSelect = false;
             this.dgv_favList.Name = "dgv_favList";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_favList.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_favList.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_favList.RowHeadersVisible = false;
             this.dgv_favList.RowHeadersWidth = 51;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_favList.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_favList.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_favList.RowTemplate.Height = 35;
-            this.dgv_favList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_favList.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgv_favList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_favList.Size = new System.Drawing.Size(577, 339);
             this.dgv_favList.TabIndex = 38;
-            // 
-            // fav_add
-            // 
-            this.fav_add.HeaderText = "";
-            this.fav_add.MinimumWidth = 6;
-            this.fav_add.Name = "fav_add";
-            this.fav_add.Width = 50;
-            // 
-            // fav_num
-            // 
-            this.fav_num.HeaderText = "순번";
-            this.fav_num.MinimumWidth = 6;
-            this.fav_num.Name = "fav_num";
-            this.fav_num.Width = 40;
-            // 
-            // fav_ccode
-            // 
-            this.fav_ccode.HeaderText = "학정번호";
-            this.fav_ccode.MinimumWidth = 6;
-            this.fav_ccode.Name = "fav_ccode";
-            this.fav_ccode.Width = 115;
-            // 
-            // fav_subj
-            // 
-            this.fav_subj.HeaderText = "과목명";
-            this.fav_subj.MinimumWidth = 6;
-            this.fav_subj.Name = "fav_subj";
-            this.fav_subj.Width = 200;
-            // 
-            // fav_credit
-            // 
-            this.fav_credit.HeaderText = "학점";
-            this.fav_credit.MinimumWidth = 6;
-            this.fav_credit.Name = "fav_credit";
-            this.fav_credit.Width = 40;
-            // 
-            // fav_prof
-            // 
-            this.fav_prof.HeaderText = "담당교수";
-            this.fav_prof.MinimumWidth = 6;
-            this.fav_prof.Name = "fav_prof";
-            this.fav_prof.Width = 75;
-            // 
-            // fav_time
-            // 
-            this.fav_time.HeaderText = "강의시간";
-            this.fav_time.MinimumWidth = 6;
-            this.fav_time.Name = "fav_time";
-            this.fav_time.Width = 80;
+            this.dgv_favList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_favList_CellContentClick);
             // 
             // tb_avail
             // 
@@ -1632,6 +1587,75 @@
             this.timer_start.Interval = 1000;
             this.timer_start.Tick += new System.EventHandler(this.timer_start_Tick);
             // 
+            // cmb_favNum
+            // 
+            this.cmb_favNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_favNum.FormattingEnabled = true;
+            this.cmb_favNum.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmb_favNum.Location = new System.Drawing.Point(6, 21);
+            this.cmb_favNum.Name = "cmb_favNum";
+            this.cmb_favNum.Size = new System.Drawing.Size(50, 21);
+            this.cmb_favNum.TabIndex = 33;
+            // 
+            // fav_add
+            // 
+            this.fav_add.HeaderText = "";
+            this.fav_add.MinimumWidth = 6;
+            this.fav_add.Name = "fav_add";
+            this.fav_add.Width = 50;
+            // 
+            // fav_num
+            // 
+            this.fav_num.HeaderText = "순번";
+            this.fav_num.MinimumWidth = 6;
+            this.fav_num.Name = "fav_num";
+            this.fav_num.Width = 40;
+            // 
+            // fav_ccode
+            // 
+            this.fav_ccode.HeaderText = "학정번호";
+            this.fav_ccode.MinimumWidth = 6;
+            this.fav_ccode.Name = "fav_ccode";
+            this.fav_ccode.Width = 115;
+            // 
+            // fav_subj
+            // 
+            this.fav_subj.HeaderText = "과목명";
+            this.fav_subj.MinimumWidth = 6;
+            this.fav_subj.Name = "fav_subj";
+            this.fav_subj.Width = 200;
+            // 
+            // fav_credit
+            // 
+            this.fav_credit.HeaderText = "학점";
+            this.fav_credit.MinimumWidth = 6;
+            this.fav_credit.Name = "fav_credit";
+            this.fav_credit.Width = 40;
+            // 
+            // fav_prof
+            // 
+            this.fav_prof.HeaderText = "담당교수";
+            this.fav_prof.MinimumWidth = 6;
+            this.fav_prof.Name = "fav_prof";
+            this.fav_prof.Width = 75;
+            // 
+            // fav_time
+            // 
+            this.fav_time.HeaderText = "강의시간";
+            this.fav_time.MinimumWidth = 6;
+            this.fav_time.Name = "fav_time";
+            this.fav_time.Width = 80;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
@@ -1662,6 +1686,7 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "수강신청 연습 프로그램";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reglist)).EndInit();
@@ -1792,13 +1817,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.DataGridViewButtonColumn fav_add;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_ccode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_subj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_credit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_prof;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_time;
         private System.Windows.Forms.Button btn_apply;
         private System.Windows.Forms.Button btn_del;
         private System.Windows.Forms.Button btn_sched;
@@ -1817,5 +1835,13 @@
         private System.Windows.Forms.LinkLabel github_link;
         private System.Windows.Forms.Button btn_start;
         private System.Windows.Forms.Timer timer_start;
+        private System.Windows.Forms.ComboBox cmb_favNum;
+        private System.Windows.Forms.DataGridViewButtonColumn fav_add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_ccode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_subj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_credit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_prof;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_time;
     }
 }
