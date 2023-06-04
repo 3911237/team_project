@@ -68,6 +68,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_clist = new System.Windows.Forms.DataGridView();
+            this.clist_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_seat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_room = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_favclear = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -163,15 +172,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.timer_start = new System.Windows.Forms.Timer(this.components);
-            this.clist_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_seat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_room = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reglist)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -582,6 +582,79 @@
             this.dgv_clist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_clist.Size = new System.Drawing.Size(577, 176);
             this.dgv_clist.TabIndex = 35;
+            // 
+            // clist_num
+            // 
+            this.clist_num.HeaderText = "순번";
+            this.clist_num.MinimumWidth = 6;
+            this.clist_num.Name = "clist_num";
+            this.clist_num.ReadOnly = true;
+            this.clist_num.Width = 40;
+            // 
+            // clist_ccode
+            // 
+            this.clist_ccode.HeaderText = "학정번호";
+            this.clist_ccode.MinimumWidth = 6;
+            this.clist_ccode.Name = "clist_ccode";
+            this.clist_ccode.ReadOnly = true;
+            this.clist_ccode.Width = 110;
+            // 
+            // clist_type
+            // 
+            this.clist_type.HeaderText = "구분";
+            this.clist_type.MinimumWidth = 6;
+            this.clist_type.Name = "clist_type";
+            this.clist_type.ReadOnly = true;
+            this.clist_type.Width = 40;
+            // 
+            // clist_subj
+            // 
+            this.clist_subj.HeaderText = "과목명";
+            this.clist_subj.MinimumWidth = 6;
+            this.clist_subj.Name = "clist_subj";
+            this.clist_subj.ReadOnly = true;
+            this.clist_subj.Width = 200;
+            // 
+            // clist_credit
+            // 
+            this.clist_credit.HeaderText = "학점";
+            this.clist_credit.MinimumWidth = 6;
+            this.clist_credit.Name = "clist_credit";
+            this.clist_credit.ReadOnly = true;
+            this.clist_credit.Width = 40;
+            // 
+            // clist_prof
+            // 
+            this.clist_prof.HeaderText = "담당교수";
+            this.clist_prof.MinimumWidth = 6;
+            this.clist_prof.Name = "clist_prof";
+            this.clist_prof.ReadOnly = true;
+            this.clist_prof.Width = 80;
+            // 
+            // clist_seat
+            // 
+            this.clist_seat.HeaderText = "여석";
+            this.clist_seat.MinimumWidth = 6;
+            this.clist_seat.Name = "clist_seat";
+            this.clist_seat.ReadOnly = true;
+            this.clist_seat.Width = 55;
+            // 
+            // clist_time
+            // 
+            this.clist_time.HeaderText = "강의시간";
+            this.clist_time.MinimumWidth = 6;
+            this.clist_time.Name = "clist_time";
+            this.clist_time.ReadOnly = true;
+            this.clist_time.Width = 85;
+            // 
+            // clist_room
+            // 
+            this.clist_room.HeaderText = "강의실";
+            this.clist_room.MinimumWidth = 6;
+            this.clist_room.Name = "clist_room";
+            this.clist_room.ReadOnly = true;
+            this.clist_room.Visible = false;
+            this.clist_room.Width = 125;
             // 
             // btn_favclear
             // 
@@ -1456,6 +1529,7 @@
             this.btn_del.TabIndex = 46;
             this.btn_del.Text = "수강삭제";
             this.btn_del.UseVisualStyleBackColor = true;
+            this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
             // 
             // curTime
             // 
@@ -1635,79 +1709,6 @@
             // 
             this.timer_start.Interval = 1000;
             this.timer_start.Tick += new System.EventHandler(this.timer_start_Tick);
-            // 
-            // clist_num
-            // 
-            this.clist_num.HeaderText = "순번";
-            this.clist_num.MinimumWidth = 6;
-            this.clist_num.Name = "clist_num";
-            this.clist_num.ReadOnly = true;
-            this.clist_num.Width = 40;
-            // 
-            // clist_ccode
-            // 
-            this.clist_ccode.HeaderText = "학정번호";
-            this.clist_ccode.MinimumWidth = 6;
-            this.clist_ccode.Name = "clist_ccode";
-            this.clist_ccode.ReadOnly = true;
-            this.clist_ccode.Width = 110;
-            // 
-            // clist_type
-            // 
-            this.clist_type.HeaderText = "구분";
-            this.clist_type.MinimumWidth = 6;
-            this.clist_type.Name = "clist_type";
-            this.clist_type.ReadOnly = true;
-            this.clist_type.Width = 40;
-            // 
-            // clist_subj
-            // 
-            this.clist_subj.HeaderText = "과목명";
-            this.clist_subj.MinimumWidth = 6;
-            this.clist_subj.Name = "clist_subj";
-            this.clist_subj.ReadOnly = true;
-            this.clist_subj.Width = 200;
-            // 
-            // clist_credit
-            // 
-            this.clist_credit.HeaderText = "학점";
-            this.clist_credit.MinimumWidth = 6;
-            this.clist_credit.Name = "clist_credit";
-            this.clist_credit.ReadOnly = true;
-            this.clist_credit.Width = 40;
-            // 
-            // clist_prof
-            // 
-            this.clist_prof.HeaderText = "담당교수";
-            this.clist_prof.MinimumWidth = 6;
-            this.clist_prof.Name = "clist_prof";
-            this.clist_prof.ReadOnly = true;
-            this.clist_prof.Width = 80;
-            // 
-            // clist_seat
-            // 
-            this.clist_seat.HeaderText = "여석";
-            this.clist_seat.MinimumWidth = 6;
-            this.clist_seat.Name = "clist_seat";
-            this.clist_seat.ReadOnly = true;
-            this.clist_seat.Width = 55;
-            // 
-            // clist_time
-            // 
-            this.clist_time.HeaderText = "강의시간";
-            this.clist_time.MinimumWidth = 6;
-            this.clist_time.Name = "clist_time";
-            this.clist_time.ReadOnly = true;
-            this.clist_time.Width = 85;
-            // 
-            // clist_room
-            // 
-            this.clist_room.HeaderText = "강의실";
-            this.clist_room.MinimumWidth = 6;
-            this.clist_room.Name = "clist_room";
-            this.clist_room.ReadOnly = true;
-            this.clist_room.Visible = false;
-            this.clist_room.Width = 125;
             // 
             // Form2
             // 
