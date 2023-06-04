@@ -406,7 +406,7 @@ namespace Kwangwoon_Sugang_Practice_Project
             }
         }
 
-        private void btn_apply_Click(object sender, EventArgs e)
+        private void btn_apply_Click(object sender, EventArgs e)//조회 버튼 눌렀을 때
         {
             if (selected == -1)
             {
@@ -424,7 +424,13 @@ namespace Kwangwoon_Sugang_Practice_Project
                 return;
             }
 */            //dgv_reglist에 추가하는 부분
-            dgv_reglist.Rows.Add((++num).ToString(),tb_ccode.Text,tb_type.Text,tb_subject.Text,tb_credit.Text,tb_prof.Text,tb_day1.Text,tb_time1.Text+"교시",tb_room1.Text,"","","");
+            dgv_reglist.Rows.Add("",tb_ccode.Text,tb_type.Text,tb_subject.Text,tb_credit.Text,tb_prof.Text,tb_day1.Text,tb_time1.Text+"교시",tb_room1.Text,"","","");
+            int currRowCount = dgv_reglist.RowCount;//행 개수
+            for (int i = 0; i < currRowCount; i++)
+            {
+                dgv_reglist.Rows[i].Cells[0].Value = i + 1;
+            }
+
             dgv_reglist.CurrentCell = null;
             clearing();
             //done[selected] = true;
@@ -446,7 +452,7 @@ namespace Kwangwoon_Sugang_Practice_Project
             tb_room1.Text = null;
         }
 
-        private void btn_start_Click(object sender, EventArgs e)//수강 신청 버튼 눌렀을 때
+        private void btn_start_Click(object sender, EventArgs e)//수강 신청시작 버튼 눌렀을 때
         {
             btn_start.Enabled = false;
             MessageBox.Show("10초 후 수강신청이 시작됩니다.\n서버 시간을 확인해주세요!","수강신청 시작",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -536,6 +542,20 @@ namespace Kwangwoon_Sugang_Practice_Project
         {
             DataGridViewRow row = dgv_favList.SelectedRows[0]; //선택된 Row 값 가져옴.
             row.SetValues("조회", row.Cells[1].Value.ToString(), "", "", "", "", "", "", "", "", "");
+        }
+
+        private void btn_del_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgv_reglist.SelectedRows[0]; //선택된 Row 값 가져옴.
+            dgv_reglist.Rows.Remove(row);
+            dgv_reglist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            int currRowCount = dgv_reglist.RowCount;//행 개수
+
+            for (int i = 0; i < currRowCount; i++)
+            {
+                dgv_reglist.Rows[i].Cells[0].Value = i + 1;
+            }
+
         }
     }
 }
