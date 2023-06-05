@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using System.Threading;
 //taskkill /pid 프로세스ID /f /t
 
+//dgv_reglist 비율 수정필요, 시간 split필요
+//추가적으로 학번 성명 표기
+
 namespace Kwangwoon_Sugang_Practice_Project
 {
     public partial class Form2 : Form
@@ -23,6 +26,8 @@ namespace Kwangwoon_Sugang_Practice_Project
         //int num=0;//몇개의 수강신청 신청했는 지
         string CsvFilePath = "2023_01_lecture_list.csv";
         DataTable dt;
+        int k = 1;
+
         int[] randNums;
         public Form2()
         {
@@ -40,10 +45,9 @@ namespace Kwangwoon_Sugang_Practice_Project
             //여석은 값이 줄어야 하므로 data table로 다룬다
             dt = CSVtoDataTable(CsvFilePath);
             dataGridView1.DataSource = dt;
-            dt.PrimaryKey = new DataColumn[] { dt.Columns["num"], dt.Columns["seat"] };
+            dt.PrimaryKey = new DataColumn[] { dt.Columns["num"], dt.Columns["seat"] };//key 설정
 
         }
-        int k = 1;
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -53,7 +57,7 @@ namespace Kwangwoon_Sugang_Practice_Project
         private void btn_end_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("수강신청을 완료 하시겠습니까?", "수강신청", MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            if (dr == DialogResult.OK)
                 Application.Exit();
         }
 
@@ -460,6 +464,7 @@ namespace Kwangwoon_Sugang_Practice_Project
             selected = -1;
 
         }
+
         void clearing()
         {
             tb_ccode.Text = null;
@@ -516,6 +521,7 @@ namespace Kwangwoon_Sugang_Practice_Project
 
             return intArray;
         }
+
         private void Randomseats()//랜덤 여석줄어들기 구현
         {
             
@@ -572,9 +578,15 @@ namespace Kwangwoon_Sugang_Practice_Project
                 MessageBox.Show("수강신청이 시작된 이후에만 조회가 가능합니다.", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (dgv_favList.Rows[e.RowIndex].Cells[2].Value.ToString() == "")//빈칸 조회했을 때
+            {
+                MessageBox.Show("즐겨찾기에 과목을 추가해야 조회가 가능합니다.", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+
+            }
             DataRow[] dr = dt.Select("num ='" + dgv_favList.Rows[e.RowIndex].Cells[2].Value.ToString() + "'");
             selected = e.RowIndex;
-
+            
             if (dr[0][1].ToString() =="0")//여석이 없을 때
             {
                 //MessageBox.Show("해당 과목은 만석입니다.", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -614,10 +626,11 @@ namespace Kwangwoon_Sugang_Practice_Project
         {
             DataGridViewRow row = dgv_reglist.SelectedRows[0]; //선택된 Row 값 가져옴.
             DataRow[] dr = dt.Select("num ='" + row.Cells[1].Value.ToString() + "'");
+            selected = -1;//삭제했므로 selected=-1로 재설정
             dr[0][2] = "0";//삭제했으므로 0으로 재설정
             dgv_reglist.Rows.Remove(row);
 
-            dgv_reglist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //dgv_reglist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             int currRowCount = dgv_reglist.RowCount;//행 개수
 
             for (int i = 0; i < currRowCount; i++)
