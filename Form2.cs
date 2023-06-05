@@ -26,7 +26,7 @@ namespace Kwangwoon_Sugang_Practice_Project
         //int num=0;//몇개의 수강신청 신청했는 지
         string CsvFilePath = "2023_01_lecture_list.csv";
         DataTable dt;
-        int k = 1;
+        int k = 1; // 검색 순번
 
         int[] randNums;
         public Form2()
@@ -154,266 +154,275 @@ namespace Kwangwoon_Sugang_Practice_Project
                 cmb_dept2.Items.Add("전체검색");
                 cmb_dept2.SelectedIndex = 0;
             }
-        }
+        } // 검색할 학부 및 학과 선택
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            StreamReader file = new StreamReader("2023_01_lecture_list.csv");
-            dgv_clist.Rows.Clear();
-            dgv_clist.Refresh();
-            k = 1;
-            while (!file.EndOfStream)
+            Form3 form3 = new Form3();
+            DialogResult dResult = form3.ShowDialog(); // 인증번호를 입력받는 form3 실행
+            if (dResult == DialogResult.No)
             {
-                string line = file.ReadLine();
-                string[] data = line.Split(',');
-                if (cmb_dept1.SelectedItem.ToString() == "전자정보공과대학")
+                MessageBox.Show("인증번호를 바르게 입력하세요!", "대학 수강신청"); // form3에서 인증번호가 틀리면 검색이 되지 않음
+            }
+            else if (dResult == DialogResult.OK) // form3에서 인증번호가 맞으면 검색 진행
+            {
+                StreamReader file = new StreamReader("2023_01_lecture_list.csv");
+                dgv_clist.Rows.Clear();
+                dgv_clist.Refresh();
+                k = 1;
+                while (!file.EndOfStream)
                 {
-                    if (data[7] != "전자정보공과대학")
-                        continue;
-                    if (cmb_dept2.SelectedItem.ToString() == "공통")
+                    string line = file.ReadLine();
+                    string[] data = line.Split(',');
+                    if (cmb_dept1.SelectedItem.ToString() == "전자정보공과대학")
                     {
-                        if (data[8] != "공통")
+                        if (data[7] != "전자정보공과대학")
                             continue;
+                        if (cmb_dept2.SelectedItem.ToString() == "공통")
+                        {
+                            if (data[8] != "공통")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "전자공학과")
+                        {
+                            if (data[8] != "전자공학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "전자통신공학과")
+                        {
+                            if (data[8] != "전자통신공학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "전자융합공학과")
+                        {
+                            if (data[8] != "전자융합공학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "전기공학과")
+                        {
+                            if (data[8] != "전기공학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "전자재료공학과")
+                        {
+                            if (data[8] != "전자재료공학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "로봇학부")
+                        {
+                            if (data[8] != "로봇학부")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "지능형로봇학과")
+                        {
+                            if (data[8] != "지능형로봇학과")
+                                continue;
+                        }
                     }
-                    if (cmb_dept2.SelectedItem.ToString() == "전자공학과")
+                    if (cmb_dept1.SelectedItem.ToString() == "소프트웨어융합대학")
                     {
-                        if (data[8] != "전자공학과")
+                        if (data[7] != "소프트웨어융합대학")
                             continue;
+                        if (cmb_dept2.SelectedItem.ToString() == "공통")
+                        {
+                            if (data[8] != "공통")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "컴퓨터정보공학부")
+                        {
+                            if (data[8] != "컴퓨터정보공학부")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "소프트웨어학부")
+                        {
+                            if (data[8] != "소프트웨어학부")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "정보융합학부")
+                        {
+                            if (data[8] != "정보융합학부")
+                                continue;
+                        }
                     }
-                    if (cmb_dept2.SelectedItem.ToString() == "전자통신공학과")
+                    if (cmb_dept1.SelectedItem.ToString() == "공과대학")
                     {
-                        if (data[8] != "전자통신공학과")
+                        if (data[7] != "공과대학")
                             continue;
+                        if (cmb_dept2.SelectedItem.ToString() == "공통")
+                        {
+                            if (data[8] != "공통")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "건축공학과")
+                        {
+                            if (data[8] != "건축공학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "화학공학과")
+                        {
+                            if (data[8] != "화학공학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "환경공학과")
+                        {
+                            if (data[8] != "환경공학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "건축학과")
+                        {
+                            if (data[8] != "건축학과")
+                                continue;
+                        }
                     }
-                    if (cmb_dept2.SelectedItem.ToString() == "전자융합공학과")
+                    if (cmb_dept1.SelectedItem.ToString() == "자연과학대학")
                     {
-                        if (data[8] != "전자융합공학과")
+                        if (data[7] != "자연과학대학")
                             continue;
+                        if (cmb_dept2.SelectedItem.ToString() == "공통")
+                        {
+                            if (data[8] != "공통")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "수학과")
+                        {
+                            if (data[8] != "수학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "화학과")
+                        {
+                            if (data[8] != "화학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "전자바이오물리학과")
+                        {
+                            if (data[8] != "전자바이오물리학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "스포츠융합과학과")
+                        {
+                            if (data[8] != "스포츠융합과학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "정보콘텐츠학과")
+                        {
+                            if (data[8] != "정보콘텐츠학과")
+                                continue;
+                        }
                     }
-                    if (cmb_dept2.SelectedItem.ToString() == "전기공학과")
+                    if (cmb_dept1.SelectedItem.ToString() == "인문사회과학대학")
                     {
-                        if (data[8] != "전기공학과")
+                        if (data[7] != "인문사회과학대학")
                             continue;
+                        if (cmb_dept2.SelectedItem.ToString() == "공통")
+                        {
+                            if (data[8] != "공통")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "국어국문학과")
+                        {
+                            if (data[8] != "국어국문학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "영어산업학과")
+                        {
+                            if (data[8] != "영어산업학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "미디어커뮤니케이션학부")
+                        {
+                            if (data[8] != "미디어커뮤니케이션학부")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "산업심리학과")
+                        {
+                            if (data[8] != "산업심리학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "동북아문화산업학부")
+                        {
+                            if (data[8] != "동북아문화산업학부")
+                                continue;
+                        }
                     }
-                    if (cmb_dept2.SelectedItem.ToString() == "전자재료공학과")
+                    if (cmb_dept1.SelectedItem.ToString() == "정책법학대학")
                     {
-                        if (data[8] != "전자재료공학과")
+                        if (data[7] != "정책법학대학")
                             continue;
+                        if (cmb_dept2.SelectedItem.ToString() == "공통")
+                        {
+                            if (data[8] != "공통")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "행정학과")
+                        {
+                            if (data[8] != "행정학과")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "법학부")
+                        {
+                            if (data[8] != "법학부")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "국제학부")
+                        {
+                            if (data[8] != "국제학부")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "자산관리학과")
+                        {
+                            if (data[8] != "자산관리학과")
+                                continue;
+                        }
                     }
-                    if (cmb_dept2.SelectedItem.ToString() == "로봇학부")
+                    if (cmb_dept1.SelectedItem.ToString() == "경영대학")
                     {
-                        if (data[8] != "로봇학부")
+                        if (data[7] != "경영대학")
                             continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "지능형로봇학과")
-                    {
-                        if (data[8] != "지능형로봇학과")
+                        if (cmb_dept2.SelectedItem.ToString() == "공통")
+                        {
+                            if (data[8] != "공통")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "경영학부")
+                        {
+                            if (data[8] != "경영학부")
+                                continue;
+                        }
+                        if (cmb_dept2.SelectedItem.ToString() == "국제통상학부")
+                        {
+                            if (data[8] != "국제통상학부")
+                                continue;
+                        }
+                    } // 선택한 학부 및 학과만 검색 결과에 나오게 함
+                    if (cmb_dept1.SelectedItem.ToString() == "교양")
+                        if (data[7] != "교양")
                             continue;
-                    }
+                    if (cmb_isu.SelectedItem.ToString() == "교필")
+                        if (data[1] != "교필")
+                            continue;
+                    if (cmb_isu.SelectedItem.ToString() == "전필")
+                        if (data[1] != "전필")
+                            continue;
+                    if (cmb_isu.SelectedItem.ToString() == "기필")
+                        if (data[1] != "기필")
+                            continue;
+                    if (cmb_isu.SelectedItem.ToString() == "교선")
+                        if (data[1] != "교선")
+                            continue;
+                    if (cmb_isu.SelectedItem.ToString() == "전선")
+                        if (data[1] != "전선")
+                            continue;
+                    if (cmb_isu.SelectedItem.ToString() == "기선")
+                        if (data[1] != "기선")
+                            continue;
+                    if (!(data[2].Contains(tb_csearch.Text)))
+                        continue; // 검색창에 입력한 텍스트를 포함한 과목만 표시함
+                    if (cb_avail.Checked)
+                        if (data[5] == "0") continue;
+                    DataRow[] dr = dt.Select("num ='" + data[0] + "'");
+                    dgv_clist.Rows.Add(k, data[0], data[1], data[2], data[3], data[4], dr[0][1].ToString() == "0" ? "만석" : dr[0][1], data[6]);
+                    k++;
                 }
-                if (cmb_dept1.SelectedItem.ToString() == "소프트웨어융합대학")
-                {
-                    if (data[7] != "소프트웨어융합대학")
-                        continue;
-                    if (cmb_dept2.SelectedItem.ToString() == "공통")
-                    {
-                        if (data[8] != "공통")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "컴퓨터정보공학부")
-                    {
-                        if (data[8] != "컴퓨터정보공학부")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "소프트웨어학부")
-                    {
-                        if (data[8] != "소프트웨어학부")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "정보융합학부")
-                    {
-                        if (data[8] != "정보융합학부")
-                            continue;
-                    }
-                }
-                if (cmb_dept1.SelectedItem.ToString() == "공과대학")
-                {
-                    if (data[7] != "공과대학")
-                        continue;
-                    if (cmb_dept2.SelectedItem.ToString() == "공통")
-                    {
-                        if (data[8] != "공통")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "건축공학과")
-                    {
-                        if (data[8] != "건축공학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "화학공학과")
-                    {
-                        if (data[8] != "화학공학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "환경공학과")
-                    {
-                        if (data[8] != "환경공학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "건축학과")
-                    {
-                        if (data[8] != "건축학과")
-                            continue;
-                    }
-                }
-                if (cmb_dept1.SelectedItem.ToString() == "자연과학대학")
-                {
-                    if (data[7] != "자연과학대학")
-                        continue;
-                    if (cmb_dept2.SelectedItem.ToString() == "공통")
-                    {
-                        if (data[8] != "공통")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "수학과")
-                    {
-                        if (data[8] != "수학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "화학과")
-                    {
-                        if (data[8] != "화학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "전자바이오물리학과")
-                    {
-                        if (data[8] != "전자바이오물리학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "스포츠융합과학과")
-                    {
-                        if (data[8] != "스포츠융합과학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "정보콘텐츠학과")
-                    {
-                        if (data[8] != "정보콘텐츠학과")
-                            continue;
-                    }
-                }
-                if (cmb_dept1.SelectedItem.ToString() == "인문사회과학대학")
-                {
-                    if (data[7] != "인문사회과학대학")
-                        continue;
-                    if (cmb_dept2.SelectedItem.ToString() == "공통")
-                    {
-                        if (data[8] != "공통")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "국어국문학과")
-                    {
-                        if (data[8] != "국어국문학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "영어산업학과")
-                    {
-                        if (data[8] != "영어산업학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "미디어커뮤니케이션학부")
-                    {
-                        if (data[8] != "미디어커뮤니케이션학부")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "산업심리학과")
-                    {
-                        if (data[8] != "산업심리학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "동북아문화산업학부")
-                    {
-                        if (data[8] != "동북아문화산업학부")
-                            continue;
-                    }
-                }
-                if (cmb_dept1.SelectedItem.ToString() == "정책법학대학")
-                {
-                    if (data[7] != "정책법학대학")
-                        continue;
-                    if (cmb_dept2.SelectedItem.ToString() == "공통")
-                    {
-                        if (data[8] != "공통")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "행정학과")
-                    {
-                        if (data[8] != "행정학과")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "법학부")
-                    {
-                        if (data[8] != "법학부")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "국제학부")
-                    {
-                        if (data[8] != "국제학부")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "자산관리학과")
-                    {
-                        if (data[8] != "자산관리학과")
-                            continue;
-                    }
-                }
-                if (cmb_dept1.SelectedItem.ToString() == "경영대학")
-                {
-                    if (data[7] != "경영대학")
-                        continue;
-                    if (cmb_dept2.SelectedItem.ToString() == "공통")
-                    {
-                        if (data[8] != "공통")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "경영학부")
-                    {
-                        if (data[8] != "경영학부")
-                            continue;
-                    }
-                    if (cmb_dept2.SelectedItem.ToString() == "국제통상학부")
-                    {
-                        if (data[8] != "국제통상학부")
-                            continue;
-                    }
-                }
-                if (cmb_dept1.SelectedItem.ToString() == "교양")
-                    if (data[7] != "교양")
-                        continue;
-                if (cmb_isu.SelectedItem.ToString() == "교필")
-                    if (data[1] != "교필")
-                        continue;
-                if (cmb_isu.SelectedItem.ToString() == "전필")
-                    if (data[1] != "전필")
-                        continue;
-                if (cmb_isu.SelectedItem.ToString() == "기필")
-                    if (data[1] != "기필")
-                        continue;
-                if (cmb_isu.SelectedItem.ToString() == "교선")
-                    if (data[1] != "교선")
-                        continue;
-                if (cmb_isu.SelectedItem.ToString() == "전선")
-                    if (data[1] != "전선")
-                        continue;
-                if (cmb_isu.SelectedItem.ToString() == "기선")
-                    if (data[1] != "기선")
-                        continue;
-                if (!(data[2].Contains(tb_csearch.Text)))
-                    continue;
-                if (cb_avail.Checked)
-                    if (data[5] == "0") continue;
-                DataRow[] dr = dt.Select("num ='"+data[0]+"'");
-                dgv_clist.Rows.Add(k, data[0], data[1], data[2], data[3], data[4],dr[0][1].ToString()=="0"?"만석":dr[0][1],data[6]);
-                k++;
             }
         }
 
@@ -546,42 +555,50 @@ namespace Kwangwoon_Sugang_Practice_Project
 
         private void btn_favadd_Click(object sender, EventArgs e)//즐찾에 추가하는 기능
         {
-            String add_fav_num = cmb_favNum.SelectedItem as String;
-            if(add_fav_num == null)
+            Form3 form3 = new Form3();
+            DialogResult dResult = form3.ShowDialog(); // 인증번호를 입력받는 form3 실행
+            if (dResult == DialogResult.No)
             {
-                MessageBox.Show("즐겨찾기 번호를 선택해 주세요", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-
+                MessageBox.Show("인증번호를 바르게 입력하세요!", "대학 수강신청"); // form3에서 인증번호가 틀리면 추가가 되지 않음
             }
-            if (dgv_clist.Rows.Count == 0)
+            else if (dResult == DialogResult.OK) // form3에서 인증번호가 맞으면 즐겨찾기 목록에 추가
             {
-                MessageBox.Show("즐겨찾기에 추가할 과목을 선택해 주세요", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                String add_fav_num = cmb_favNum.SelectedItem as String;
+                if (add_fav_num == null)
+                {
+                    MessageBox.Show("즐겨찾기 번호를 선택해 주세요", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
 
+                }
+                if (dgv_clist.Rows.Count == 0)
+                {
+                    MessageBox.Show("즐겨찾기에 추가할 과목을 선택해 주세요", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+
+                }
+
+                DataGridViewRow row = dgv_clist.SelectedRows[0]; //선택된 Row 값 가져옴.
+
+                String add_fav_ccode = row.Cells[1].Value.ToString();//학점번호
+                String add_fav_type = row.Cells[2].Value.ToString();//구분
+                String add_fav_subj = row.Cells[3].Value.ToString();//과목명
+                String add_fav_credit = row.Cells[4].Value.ToString();//학점
+                String add_fav_prof = row.Cells[5].Value.ToString();//교수
+                String add_fav_seat = row.Cells[6].Value.ToString();//여석
+                String add_fav_time = row.Cells[7].Value.ToString();//강의시간
+                String add_fav_room = "";//강의실
+                int index = Convert.ToInt32(cmb_favNum.SelectedItem) - 1;
+
+                //MessageBox.Show(add_fav_num+ add_fav_ccode+add_fav_subj+add_fav_credit+ add_fav_prof+ add_fav_time+"\n"+ index);
+                dgv_favList.Rows[index].Cells[2].Value = add_fav_ccode.ToString();
+                dgv_favList.Rows[index].Cells[3].Value = add_fav_subj.ToString();
+                dgv_favList.Rows[index].Cells[4].Value = add_fav_credit.ToString();
+                dgv_favList.Rows[index].Cells[5].Value = add_fav_prof.ToString();
+                dgv_favList.Rows[index].Cells[6].Value = add_fav_time.ToString();
+                dgv_favList.Rows[index].Cells[7].Value = add_fav_room.ToString();//강의실
+                dgv_favList.Rows[index].Cells[8].Value = add_fav_seat.ToString();//여석
+                dgv_favList.Rows[index].Cells[9].Value = add_fav_type.ToString();//구분
             }
-
-            DataGridViewRow row = dgv_clist.SelectedRows[0]; //선택된 Row 값 가져옴.
-
-            String add_fav_ccode = row.Cells[1].Value.ToString();//학점번호
-            String add_fav_type = row.Cells[2].Value.ToString();//구분
-            String add_fav_subj = row.Cells[3].Value.ToString();//과목명
-            String add_fav_credit=row.Cells[4].Value.ToString();//학점
-            String add_fav_prof=row.Cells[5].Value.ToString();//교수
-            String add_fav_seat = row.Cells[6].Value.ToString();//여석
-            String add_fav_time =row.Cells[7].Value.ToString();//강의시간
-            String add_fav_room = "";//강의실
-            int index = Convert.ToInt32( cmb_favNum.SelectedItem)-1;
-
-            //MessageBox.Show(add_fav_num+ add_fav_ccode+add_fav_subj+add_fav_credit+ add_fav_prof+ add_fav_time+"\n"+ index);
-            dgv_favList.Rows[index].Cells[2].Value = add_fav_ccode.ToString();
-            dgv_favList.Rows[index].Cells[3].Value = add_fav_subj.ToString();
-            dgv_favList.Rows[index].Cells[4].Value = add_fav_credit.ToString();
-            dgv_favList.Rows[index].Cells[5].Value = add_fav_prof.ToString();
-            dgv_favList.Rows[index].Cells[6].Value = add_fav_time.ToString();
-            dgv_favList.Rows[index].Cells[7].Value = add_fav_room.ToString();//강의실
-            dgv_favList.Rows[index].Cells[8].Value = add_fav_seat.ToString();//여석
-            dgv_favList.Rows[index].Cells[9].Value = add_fav_type.ToString();//구분
-
         }
 
         private void dgv_favList_CellContentClick(object sender, DataGridViewCellEventArgs e)//조회 버튼 눌렀을 때
