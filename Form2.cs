@@ -546,8 +546,22 @@ namespace Kwangwoon_Sugang_Practice_Project
 
         private void btn_favadd_Click(object sender, EventArgs e)//즐찾에 추가하는 기능
         {
+            String add_fav_num = cmb_favNum.SelectedItem as String;
+            if(add_fav_num == null)
+            {
+                MessageBox.Show("즐겨찾기 번호를 선택해 주세요", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+            if (dgv_clist.Rows.Count == 0)
+            {
+                MessageBox.Show("즐겨찾기에 추가할 과목을 선택해 주세요", "수강신청 연습", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+
             DataGridViewRow row = dgv_clist.SelectedRows[0]; //선택된 Row 값 가져옴.
-            //String add_fav_num = cmb_favNum.SelectedItem as String;
+
             String add_fav_ccode = row.Cells[1].Value.ToString();//학점번호
             String add_fav_type = row.Cells[2].Value.ToString();//구분
             String add_fav_subj = row.Cells[3].Value.ToString();//과목명
