@@ -33,11 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_reglist = new System.Windows.Forms.DataGridView();
@@ -68,6 +69,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_clist = new System.Windows.Forms.DataGridView();
+            this.clist_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_seat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clist_room = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_favclear = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -164,15 +174,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.timer_start = new System.Windows.Forms.Timer(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clist_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_ccode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_subj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_credit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_prof = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_seat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clist_room = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_restart = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reglist)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -192,11 +194,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgv_reglist);
-            this.groupBox1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox1.Location = new System.Drawing.Point(9, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(774, 241);
+            this.groupBox1.Size = new System.Drawing.Size(774, 278);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "수강신청교과목";
@@ -207,7 +209,7 @@
             this.dgv_reglist.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -233,7 +235,7 @@
             this.dgv_reglist.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -246,7 +248,7 @@
             this.dgv_reglist.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Cyan;
             this.dgv_reglist.RowTemplate.Height = 45;
             this.dgv_reglist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_reglist.Size = new System.Drawing.Size(772, 226);
+            this.dgv_reglist.Size = new System.Drawing.Size(772, 258);
             this.dgv_reglist.TabIndex = 24;
             // 
             // reg_num
@@ -359,7 +361,7 @@
             // 
             // cmb_dept1
             // 
-            this.cmb_dept1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmb_dept1.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmb_dept1.FormattingEnabled = true;
             this.cmb_dept1.Items.AddRange(new object[] {
             "전체검색",
@@ -373,14 +375,14 @@
             "교양"});
             this.cmb_dept1.Location = new System.Drawing.Point(837, 23);
             this.cmb_dept1.Name = "cmb_dept1";
-            this.cmb_dept1.Size = new System.Drawing.Size(98, 21);
+            this.cmb_dept1.Size = new System.Drawing.Size(115, 23);
             this.cmb_dept1.TabIndex = 27;
             this.cmb_dept1.Text = "전체검색";
             this.cmb_dept1.SelectedIndexChanged += new System.EventHandler(this.cmb_dept1_SelectedIndexChanged);
             // 
             // btn_favadd
             // 
-            this.btn_favadd.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_favadd.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_favadd.Location = new System.Drawing.Point(61, 16);
             this.btn_favadd.Name = "btn_favadd";
             this.btn_favadd.Size = new System.Drawing.Size(45, 28);
@@ -412,7 +414,7 @@
             // 
             // cmb_isu
             // 
-            this.cmb_isu.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmb_isu.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmb_isu.FormattingEnabled = true;
             this.cmb_isu.Items.AddRange(new object[] {
             "전체검색",
@@ -424,26 +426,27 @@
             "기선"});
             this.cmb_isu.Location = new System.Drawing.Point(1101, 23);
             this.cmb_isu.Name = "cmb_isu";
-            this.cmb_isu.Size = new System.Drawing.Size(91, 21);
+            this.cmb_isu.Size = new System.Drawing.Size(91, 23);
             this.cmb_isu.TabIndex = 29;
             this.cmb_isu.Text = "전체검색";
             // 
             // tb_csearch
             // 
-            this.tb_csearch.Location = new System.Drawing.Point(838, 44);
+            this.tb_csearch.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_csearch.Location = new System.Drawing.Point(837, 46);
             this.tb_csearch.Name = "tb_csearch";
-            this.tb_csearch.Size = new System.Drawing.Size(226, 22);
+            this.tb_csearch.Size = new System.Drawing.Size(226, 25);
             this.tb_csearch.TabIndex = 33;
             // 
             // cmb_dept2
             // 
-            this.cmb_dept2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmb_dept2.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmb_dept2.FormattingEnabled = true;
             this.cmb_dept2.Items.AddRange(new object[] {
             "전체검색"});
-            this.cmb_dept2.Location = new System.Drawing.Point(940, 23);
+            this.cmb_dept2.Location = new System.Drawing.Point(953, 23);
             this.cmb_dept2.Name = "cmb_dept2";
-            this.cmb_dept2.Size = new System.Drawing.Size(125, 21);
+            this.cmb_dept2.Size = new System.Drawing.Size(110, 23);
             this.cmb_dept2.TabIndex = 28;
             this.cmb_dept2.Text = "전체검색";
             // 
@@ -456,7 +459,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupBox2.Location = new System.Drawing.Point(789, 7);
             this.groupBox2.Name = "groupBox2";
@@ -470,7 +473,7 @@
             this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.cmb_favNum);
             this.groupBox3.Controls.Add(this.btn_favadd);
-            this.groupBox3.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox3.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(459, 10);
             this.groupBox3.Name = "groupBox3";
@@ -482,6 +485,7 @@
             // cmb_favNum
             // 
             this.cmb_favNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_favNum.Font = new System.Drawing.Font("Dotum", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cmb_favNum.FormattingEnabled = true;
             this.cmb_favNum.Items.AddRange(new object[] {
             "1",
@@ -496,7 +500,7 @@
             "10"});
             this.cmb_favNum.Location = new System.Drawing.Point(6, 21);
             this.cmb_favNum.Name = "cmb_favNum";
-            this.cmb_favNum.Size = new System.Drawing.Size(50, 21);
+            this.cmb_favNum.Size = new System.Drawing.Size(50, 23);
             this.cmb_favNum.TabIndex = 33;
             // 
             // label5
@@ -547,7 +551,7 @@
             this.dgv_clist.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -569,28 +573,125 @@
             this.dgv_clist.MultiSelect = false;
             this.dgv_clist.Name = "dgv_clist";
             this.dgv_clist.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_clist.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_clist.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_clist.RowHeadersVisible = false;
             this.dgv_clist.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_clist.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_clist.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_clist.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Cyan;
             this.dgv_clist.RowTemplate.Height = 45;
             this.dgv_clist.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_clist.Size = new System.Drawing.Size(577, 176);
+            this.dgv_clist.Size = new System.Drawing.Size(577, 208);
             this.dgv_clist.TabIndex = 35;
+            // 
+            // clist_num
+            // 
+            this.clist_num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clist_num.HeaderText = "순번";
+            this.clist_num.MinimumWidth = 6;
+            this.clist_num.Name = "clist_num";
+            this.clist_num.ReadOnly = true;
+            this.clist_num.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_num.Width = 50;
+            // 
+            // clist_ccode
+            // 
+            this.clist_ccode.HeaderText = "학정번호";
+            this.clist_ccode.MinimumWidth = 6;
+            this.clist_ccode.Name = "clist_ccode";
+            this.clist_ccode.ReadOnly = true;
+            this.clist_ccode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_ccode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_ccode.Width = 125;
+            // 
+            // clist_type
+            // 
+            this.clist_type.HeaderText = "구분";
+            this.clist_type.MinimumWidth = 6;
+            this.clist_type.Name = "clist_type";
+            this.clist_type.ReadOnly = true;
+            this.clist_type.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_type.Width = 62;
+            // 
+            // clist_subj
+            // 
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_subj.DefaultCellStyle = dataGridViewCellStyle5;
+            this.clist_subj.HeaderText = "과목명";
+            this.clist_subj.MinimumWidth = 6;
+            this.clist_subj.Name = "clist_subj";
+            this.clist_subj.ReadOnly = true;
+            this.clist_subj.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_subj.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_subj.Width = 150;
+            // 
+            // clist_credit
+            // 
+            this.clist_credit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.clist_credit.HeaderText = "학점";
+            this.clist_credit.MinimumWidth = 6;
+            this.clist_credit.Name = "clist_credit";
+            this.clist_credit.ReadOnly = true;
+            this.clist_credit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_credit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_credit.Width = 39;
+            // 
+            // clist_prof
+            // 
+            this.clist_prof.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.clist_prof.HeaderText = "담당교수";
+            this.clist_prof.MinimumWidth = 6;
+            this.clist_prof.Name = "clist_prof";
+            this.clist_prof.ReadOnly = true;
+            this.clist_prof.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_prof.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_prof.Width = 65;
+            // 
+            // clist_seat
+            // 
+            this.clist_seat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.clist_seat.HeaderText = "여석";
+            this.clist_seat.MinimumWidth = 6;
+            this.clist_seat.Name = "clist_seat";
+            this.clist_seat.ReadOnly = true;
+            this.clist_seat.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_seat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_seat.Width = 39;
+            // 
+            // clist_time
+            // 
+            this.clist_time.HeaderText = "강의시간";
+            this.clist_time.MinimumWidth = 6;
+            this.clist_time.Name = "clist_time";
+            this.clist_time.ReadOnly = true;
+            this.clist_time.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_time.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_time.Width = 80;
+            // 
+            // clist_room
+            // 
+            this.clist_room.HeaderText = "강의실";
+            this.clist_room.MinimumWidth = 6;
+            this.clist_room.Name = "clist_room";
+            this.clist_room.ReadOnly = true;
+            this.clist_room.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clist_room.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clist_room.Visible = false;
+            this.clist_room.Width = 75;
             // 
             // btn_favclear
             // 
             this.btn_favclear.ForeColor = System.Drawing.Color.Black;
-            this.btn_favclear.Location = new System.Drawing.Point(509, 9);
+            this.btn_favclear.Location = new System.Drawing.Point(509, 7);
             this.btn_favclear.Name = "btn_favclear";
             this.btn_favclear.Size = new System.Drawing.Size(62, 23);
             this.btn_favclear.TabIndex = 36;
@@ -601,9 +702,9 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.btn_favclear);
-            this.groupBox10.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox10.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox10.Location = new System.Drawing.Point(789, 250);
+            this.groupBox10.Location = new System.Drawing.Point(789, 284);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(577, 34);
             this.groupBox10.TabIndex = 37;
@@ -613,9 +714,9 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label34.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label34.Location = new System.Drawing.Point(790, 632);
+            this.label34.Location = new System.Drawing.Point(790, 668);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(580, 13);
             this.label34.TabIndex = 39;
@@ -625,14 +726,14 @@
             // 
             this.dgv_favList.AllowUserToAddRows = false;
             this.dgv_favList.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_favList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_favList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_favList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_favList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fav_add,
@@ -645,23 +746,22 @@
             this.fav_room,
             this.fav_seat,
             this.fav_type});
-            this.dgv_favList.Location = new System.Drawing.Point(789, 285);
+            this.dgv_favList.Location = new System.Drawing.Point(789, 321);
             this.dgv_favList.MultiSelect = false;
             this.dgv_favList.Name = "dgv_favList";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_favList.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_favList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_favList.RowHeadersVisible = false;
             this.dgv_favList.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_favList.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_favList.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_favList.RowTemplate.Height = 35;
-            this.dgv_favList.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgv_favList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_favList.Size = new System.Drawing.Size(577, 339);
             this.dgv_favList.TabIndex = 38;
@@ -672,13 +772,15 @@
             this.fav_add.HeaderText = "";
             this.fav_add.MinimumWidth = 6;
             this.fav_add.Name = "fav_add";
-            this.fav_add.Width = 50;
+            this.fav_add.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.fav_add.Width = 55;
             // 
             // fav_num
             // 
             this.fav_num.HeaderText = "순번";
             this.fav_num.MinimumWidth = 6;
             this.fav_num.Name = "fav_num";
+            this.fav_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.fav_num.Width = 40;
             // 
             // fav_ccode
@@ -686,6 +788,7 @@
             this.fav_ccode.HeaderText = "학정번호";
             this.fav_ccode.MinimumWidth = 6;
             this.fav_ccode.Name = "fav_ccode";
+            this.fav_ccode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.fav_ccode.Width = 115;
             // 
             // fav_subj
@@ -693,13 +796,16 @@
             this.fav_subj.HeaderText = "과목명";
             this.fav_subj.MinimumWidth = 6;
             this.fav_subj.Name = "fav_subj";
-            this.fav_subj.Width = 200;
+            this.fav_subj.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fav_subj.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fav_subj.Width = 165;
             // 
             // fav_credit
             // 
             this.fav_credit.HeaderText = "학점";
             this.fav_credit.MinimumWidth = 6;
             this.fav_credit.Name = "fav_credit";
+            this.fav_credit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.fav_credit.Width = 40;
             // 
             // fav_prof
@@ -707,6 +813,7 @@
             this.fav_prof.HeaderText = "담당교수";
             this.fav_prof.MinimumWidth = 6;
             this.fav_prof.Name = "fav_prof";
+            this.fav_prof.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.fav_prof.Width = 75;
             // 
             // fav_time
@@ -714,6 +821,7 @@
             this.fav_time.HeaderText = "강의시간";
             this.fav_time.MinimumWidth = 6;
             this.fav_time.Name = "fav_time";
+            this.fav_time.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.fav_time.Width = 80;
             // 
             // fav_room
@@ -721,6 +829,7 @@
             this.fav_room.HeaderText = "강의실";
             this.fav_room.MinimumWidth = 6;
             this.fav_room.Name = "fav_room";
+            this.fav_room.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.fav_room.Visible = false;
             this.fav_room.Width = 125;
             // 
@@ -729,6 +838,7 @@
             this.fav_seat.HeaderText = "여석";
             this.fav_seat.MinimumWidth = 6;
             this.fav_seat.Name = "fav_seat";
+            this.fav_seat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.fav_seat.Visible = false;
             this.fav_seat.Width = 125;
             // 
@@ -737,13 +847,14 @@
             this.fav_type.HeaderText = "이수구분";
             this.fav_type.MinimumWidth = 6;
             this.fav_type.Name = "fav_type";
+            this.fav_type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.fav_type.Visible = false;
             this.fav_type.Width = 125;
             // 
             // tb_avail
             // 
             this.tb_avail.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_avail.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_avail.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_avail.ForeColor = System.Drawing.Color.Red;
             this.tb_avail.Location = new System.Drawing.Point(504, 90);
             this.tb_avail.Name = "tb_avail";
@@ -755,7 +866,7 @@
             // textBox27
             // 
             this.textBox27.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox27.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox27.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox27.Location = new System.Drawing.Point(504, 65);
             this.textBox27.Name = "textBox27";
             this.textBox27.ReadOnly = true;
@@ -765,7 +876,7 @@
             // tb_isu
             // 
             this.tb_isu.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_isu.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_isu.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_isu.Location = new System.Drawing.Point(325, 40);
             this.tb_isu.Name = "tb_isu";
             this.tb_isu.ReadOnly = true;
@@ -809,7 +920,7 @@
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.label12);
             this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox6.Location = new System.Drawing.Point(196, 250);
+            this.groupBox6.Location = new System.Drawing.Point(196, 291);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(587, 176);
             this.groupBox6.TabIndex = 42;
@@ -819,7 +930,7 @@
             // textBox17
             // 
             this.textBox17.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox17.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox17.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox17.Location = new System.Drawing.Point(195, 147);
             this.textBox17.Name = "textBox17";
             this.textBox17.ReadOnly = true;
@@ -829,7 +940,7 @@
             // textBox18
             // 
             this.textBox18.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox18.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox18.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox18.Location = new System.Drawing.Point(195, 121);
             this.textBox18.Name = "textBox18";
             this.textBox18.ReadOnly = true;
@@ -839,7 +950,7 @@
             // textBox19
             // 
             this.textBox19.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox19.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox19.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox19.Location = new System.Drawing.Point(100, 147);
             this.textBox19.Name = "textBox19";
             this.textBox19.ReadOnly = true;
@@ -849,7 +960,7 @@
             // textBox20
             // 
             this.textBox20.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox20.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox20.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox20.Location = new System.Drawing.Point(67, 147);
             this.textBox20.Name = "textBox20";
             this.textBox20.ReadOnly = true;
@@ -859,7 +970,7 @@
             // textBox21
             // 
             this.textBox21.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox21.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox21.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox21.Location = new System.Drawing.Point(100, 121);
             this.textBox21.Name = "textBox21";
             this.textBox21.ReadOnly = true;
@@ -869,7 +980,7 @@
             // textBox22
             // 
             this.textBox22.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox22.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox22.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox22.Location = new System.Drawing.Point(67, 121);
             this.textBox22.Name = "textBox22";
             this.textBox22.ReadOnly = true;
@@ -879,7 +990,7 @@
             // textBox11
             // 
             this.textBox11.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox11.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox11.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox11.Location = new System.Drawing.Point(195, 94);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
@@ -889,7 +1000,7 @@
             // tb_room1
             // 
             this.tb_room1.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_room1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_room1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_room1.Location = new System.Drawing.Point(195, 68);
             this.tb_room1.Name = "tb_room1";
             this.tb_room1.ReadOnly = true;
@@ -899,7 +1010,7 @@
             // tb_time2
             // 
             this.tb_time2.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_time2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_time2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_time2.Location = new System.Drawing.Point(100, 94);
             this.tb_time2.Name = "tb_time2";
             this.tb_time2.ReadOnly = true;
@@ -909,7 +1020,7 @@
             // tb_day2
             // 
             this.tb_day2.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_day2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_day2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_day2.Location = new System.Drawing.Point(67, 94);
             this.tb_day2.Name = "tb_day2";
             this.tb_day2.ReadOnly = true;
@@ -936,7 +1047,7 @@
             // tb_prof
             // 
             this.tb_prof.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_prof.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_prof.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_prof.Location = new System.Drawing.Point(504, 40);
             this.tb_prof.Name = "tb_prof";
             this.tb_prof.ReadOnly = true;
@@ -947,7 +1058,7 @@
             // tb_credit
             // 
             this.tb_credit.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_credit.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_credit.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_credit.Location = new System.Drawing.Point(413, 40);
             this.tb_credit.Name = "tb_credit";
             this.tb_credit.ReadOnly = true;
@@ -958,7 +1069,7 @@
             // tb_time1
             // 
             this.tb_time1.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_time1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_time1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_time1.Location = new System.Drawing.Point(100, 68);
             this.tb_time1.Name = "tb_time1";
             this.tb_time1.ReadOnly = true;
@@ -968,7 +1079,7 @@
             // tb_day1
             // 
             this.tb_day1.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_day1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_day1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_day1.Location = new System.Drawing.Point(67, 68);
             this.tb_day1.Name = "tb_day1";
             this.tb_day1.ReadOnly = true;
@@ -978,7 +1089,7 @@
             // tb_subject
             // 
             this.tb_subject.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_subject.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_subject.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_subject.Location = new System.Drawing.Point(238, 13);
             this.tb_subject.Name = "tb_subject";
             this.tb_subject.ReadOnly = true;
@@ -988,7 +1099,7 @@
             // tb_type
             // 
             this.tb_type.BackColor = System.Drawing.SystemColors.Window;
-            this.tb_type.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_type.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_type.Location = new System.Drawing.Point(67, 41);
             this.tb_type.Name = "tb_type";
             this.tb_type.ReadOnly = true;
@@ -998,7 +1109,7 @@
             // tb_ccode
             // 
             this.tb_ccode.BackColor = System.Drawing.Color.White;
-            this.tb_ccode.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb_ccode.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tb_ccode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.tb_ccode.Location = new System.Drawing.Point(67, 15);
             this.tb_ccode.Name = "tb_ccode";
@@ -1020,7 +1131,7 @@
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox8.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox8.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox8.Location = new System.Drawing.Point(462, 117);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
@@ -1192,7 +1303,7 @@
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox5.Location = new System.Drawing.Point(10, 338);
+            this.groupBox5.Location = new System.Drawing.Point(9, 379);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(174, 88);
             this.groupBox5.TabIndex = 41;
@@ -1202,7 +1313,7 @@
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox6.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox6.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox6.Location = new System.Drawing.Point(74, 62);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
@@ -1212,7 +1323,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox5.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox5.Location = new System.Drawing.Point(74, 38);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
@@ -1222,7 +1333,7 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox4.Location = new System.Drawing.Point(74, 14);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
@@ -1238,7 +1349,7 @@
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox4.Location = new System.Drawing.Point(10, 250);
+            this.groupBox4.Location = new System.Drawing.Point(9, 291);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(174, 88);
             this.groupBox4.TabIndex = 40;
@@ -1248,7 +1359,7 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox3.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox3.Location = new System.Drawing.Point(74, 15);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -1258,7 +1369,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox2.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox2.Location = new System.Drawing.Point(74, 37);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -1268,7 +1379,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox1.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.Location = new System.Drawing.Point(74, 61);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -1290,7 +1401,7 @@
             this.groupBox7.Controls.Add(this.label23);
             this.groupBox7.Controls.Add(this.label22);
             this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupBox7.Location = new System.Drawing.Point(9, 432);
+            this.groupBox7.Location = new System.Drawing.Point(9, 469);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(774, 56);
             this.groupBox7.TabIndex = 43;
@@ -1300,7 +1411,7 @@
             // textBox16
             // 
             this.textBox16.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox16.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox16.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox16.Location = new System.Drawing.Point(532, 19);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
@@ -1310,7 +1421,7 @@
             // textBox15
             // 
             this.textBox15.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox15.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox15.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox15.Location = new System.Drawing.Point(441, 21);
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
@@ -1320,7 +1431,7 @@
             // textBox14
             // 
             this.textBox14.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox14.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox14.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox14.Location = new System.Drawing.Point(368, 21);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
@@ -1330,7 +1441,7 @@
             // textBox13
             // 
             this.textBox13.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox13.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox13.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox13.Location = new System.Drawing.Point(295, 22);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
@@ -1340,7 +1451,7 @@
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox9.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox9.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox9.Location = new System.Drawing.Point(77, 22);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
@@ -1350,7 +1461,7 @@
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox7.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox7.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox7.Location = new System.Drawing.Point(171, 21);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
@@ -1430,7 +1541,7 @@
             this.groupBox8.Controls.Add(this.label30);
             this.groupBox8.Controls.Add(this.label29);
             this.groupBox8.Controls.Add(this.label28);
-            this.groupBox8.Location = new System.Drawing.Point(10, 493);
+            this.groupBox8.Location = new System.Drawing.Point(9, 525);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1453,7 +1564,7 @@
             // 
             // btn_del
             // 
-            this.btn_del.Location = new System.Drawing.Point(595, 18);
+            this.btn_del.Location = new System.Drawing.Point(590, 16);
             this.btn_del.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_del.Name = "btn_del";
             this.btn_del.Size = new System.Drawing.Size(76, 46);
@@ -1466,7 +1577,7 @@
             // 
             this.curTime.AutoSize = true;
             this.curTime.BackColor = System.Drawing.Color.Transparent;
-            this.curTime.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.curTime.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.curTime.Location = new System.Drawing.Point(161, 45);
             this.curTime.Name = "curTime";
             this.curTime.Size = new System.Drawing.Size(65, 15);
@@ -1477,7 +1588,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(161, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 15);
@@ -1487,7 +1598,7 @@
             // textBox26
             // 
             this.textBox26.BackColor = System.Drawing.Color.White;
-            this.textBox26.Font = new System.Drawing.Font("굴림", 8F);
+            this.textBox26.Font = new System.Drawing.Font("Gulim", 8F);
             this.textBox26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.textBox26.Location = new System.Drawing.Point(154, 41);
             this.textBox26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1511,7 +1622,7 @@
             // textBox25
             // 
             this.textBox25.BackColor = System.Drawing.Color.White;
-            this.textBox25.Font = new System.Drawing.Font("굴림", 8F);
+            this.textBox25.Font = new System.Drawing.Font("Gulim", 8F);
             this.textBox25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.textBox25.Location = new System.Drawing.Point(154, 12);
             this.textBox25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1563,13 +1674,14 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.btn_restart);
             this.groupBox9.Controls.Add(this.btn_start);
             this.groupBox9.Controls.Add(this.github_link);
             this.groupBox9.Controls.Add(this.btn_sched);
             this.groupBox9.Controls.Add(this.linkLabel1);
             this.groupBox9.Controls.Add(this.label33);
             this.groupBox9.Controls.Add(this.label32);
-            this.groupBox9.Location = new System.Drawing.Point(10, 560);
+            this.groupBox9.Location = new System.Drawing.Point(9, 596);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1579,10 +1691,10 @@
             // 
             // btn_start
             // 
-            this.btn_start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btn_start.Location = new System.Drawing.Point(595, 28);
+            this.btn_start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_start.Location = new System.Drawing.Point(697, 28);
             this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(76, 41);
+            this.btn_start.Size = new System.Drawing.Size(71, 41);
             this.btn_start.TabIndex = 48;
             this.btn_start.Text = "연습 시작";
             this.btn_start.UseVisualStyleBackColor = false;
@@ -1597,16 +1709,19 @@
             this.github_link.TabIndex = 47;
             this.github_link.TabStop = true;
             this.github_link.Text = "https://github.com/3911237/team_project";
+            this.github_link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.github_link_LinkClicked);
             // 
             // btn_sched
             // 
-            this.btn_sched.Location = new System.Drawing.Point(692, 23);
+            this.btn_sched.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_sched.Location = new System.Drawing.Point(620, 28);
             this.btn_sched.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_sched.Name = "btn_sched";
-            this.btn_sched.Size = new System.Drawing.Size(76, 46);
+            this.btn_sched.Size = new System.Drawing.Size(71, 41);
             this.btn_sched.TabIndex = 46;
             this.btn_sched.Text = "시간표";
-            this.btn_sched.UseVisualStyleBackColor = true;
+            this.btn_sched.UseVisualStyleBackColor = false;
+            this.btn_sched.Click += new System.EventHandler(this.btn_sched_Click);
             // 
             // linkLabel1
             // 
@@ -1644,91 +1759,25 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1144, 379);
+            this.dataGridView1.Location = new System.Drawing.Point(1144, 415);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(175, 209);
             this.dataGridView1.TabIndex = 61;
+            this.dataGridView1.Visible = false;
             // 
-            // clist_num
+            // btn_restart
             // 
-            this.clist_num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clist_num.HeaderText = "순번";
-            this.clist_num.MinimumWidth = 6;
-            this.clist_num.Name = "clist_num";
-            this.clist_num.ReadOnly = true;
-            this.clist_num.Width = 60;
-            // 
-            // clist_ccode
-            // 
-            this.clist_ccode.HeaderText = "학정번호";
-            this.clist_ccode.MinimumWidth = 6;
-            this.clist_ccode.Name = "clist_ccode";
-            this.clist_ccode.ReadOnly = true;
-            this.clist_ccode.Width = 88;
-            // 
-            // clist_type
-            // 
-            this.clist_type.HeaderText = "구분";
-            this.clist_type.MinimumWidth = 6;
-            this.clist_type.Name = "clist_type";
-            this.clist_type.ReadOnly = true;
-            this.clist_type.Width = 62;
-            // 
-            // clist_subj
-            // 
-            this.clist_subj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.clist_subj.HeaderText = "과목명";
-            this.clist_subj.MinimumWidth = 6;
-            this.clist_subj.Name = "clist_subj";
-            this.clist_subj.ReadOnly = true;
-            this.clist_subj.Width = 75;
-            // 
-            // clist_credit
-            // 
-            this.clist_credit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.clist_credit.HeaderText = "학점";
-            this.clist_credit.MinimumWidth = 6;
-            this.clist_credit.Name = "clist_credit";
-            this.clist_credit.ReadOnly = true;
-            this.clist_credit.Width = 62;
-            // 
-            // clist_prof
-            // 
-            this.clist_prof.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.clist_prof.HeaderText = "담당교수";
-            this.clist_prof.MinimumWidth = 6;
-            this.clist_prof.Name = "clist_prof";
-            this.clist_prof.ReadOnly = true;
-            this.clist_prof.Width = 88;
-            // 
-            // clist_seat
-            // 
-            this.clist_seat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.clist_seat.HeaderText = "여석";
-            this.clist_seat.MinimumWidth = 6;
-            this.clist_seat.Name = "clist_seat";
-            this.clist_seat.ReadOnly = true;
-            this.clist_seat.Width = 62;
-            // 
-            // clist_time
-            // 
-            this.clist_time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.clist_time.HeaderText = "강의시간";
-            this.clist_time.MinimumWidth = 6;
-            this.clist_time.Name = "clist_time";
-            this.clist_time.ReadOnly = true;
-            this.clist_time.Width = 88;
-            // 
-            // clist_room
-            // 
-            this.clist_room.HeaderText = "강의실";
-            this.clist_room.MinimumWidth = 6;
-            this.clist_room.Name = "clist_room";
-            this.clist_room.ReadOnly = true;
-            this.clist_room.Visible = false;
-            this.clist_room.Width = 75;
+            this.btn_restart.BackColor = System.Drawing.Color.Pink;
+            this.btn_restart.Location = new System.Drawing.Point(543, 28);
+            this.btn_restart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_restart.Name = "btn_restart";
+            this.btn_restart.Size = new System.Drawing.Size(71, 41);
+            this.btn_restart.TabIndex = 49;
+            this.btn_restart.Text = "재시작";
+            this.btn_restart.UseVisualStyleBackColor = false;
+            this.btn_restart.Click += new System.EventHandler(this.btn_restart_Click);
             // 
             // Form2
             // 
@@ -1736,7 +1785,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1376, 658);
+            this.ClientSize = new System.Drawing.Size(1376, 695);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -1755,7 +1804,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox9);
-            this.Font = new System.Drawing.Font("굴림", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Font = new System.Drawing.Font("Gulim", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
@@ -1905,16 +1954,6 @@
         private System.Windows.Forms.Button btn_start;
         private System.Windows.Forms.Timer timer_start;
         private System.Windows.Forms.ComboBox cmb_favNum;
-        private System.Windows.Forms.DataGridViewButtonColumn fav_add;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_ccode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_subj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_credit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_prof;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_room;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_seat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fav_type;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clist_num;
         private System.Windows.Forms.DataGridViewTextBoxColumn clist_ccode;
@@ -1925,5 +1964,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clist_seat;
         private System.Windows.Forms.DataGridViewTextBoxColumn clist_time;
         private System.Windows.Forms.DataGridViewTextBoxColumn clist_room;
+        private System.Windows.Forms.DataGridViewButtonColumn fav_add;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_ccode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_subj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_credit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_prof;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_room;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_seat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fav_type;
+        private System.Windows.Forms.Button btn_restart;
     }
 }

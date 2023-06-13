@@ -36,9 +36,10 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(336, 12);
+            this.btnOK.Location = new System.Drawing.Point(358, 16);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(86, 31);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "확인";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(336, 41);
+            this.btnCancel.Location = new System.Drawing.Point(358, 55);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(86, 31);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "취소";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -56,32 +58,36 @@
             // 
             // tb_PIN
             // 
-            this.tb_PIN.Location = new System.Drawing.Point(12, 125);
+            this.tb_PIN.Location = new System.Drawing.Point(14, 143);
+            this.tb_PIN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_PIN.Name = "tb_PIN";
-            this.tb_PIN.Size = new System.Drawing.Size(415, 21);
+            this.tb_PIN.Size = new System.Drawing.Size(430, 22);
             this.tb_PIN.TabIndex = 1;
             this.tb_PIN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_PIN_KeyDown);
             // 
             // lb_PIN
             // 
             this.lb_PIN.AutoSize = true;
-            this.lb_PIN.Location = new System.Drawing.Point(10, 12);
+            this.lb_PIN.Location = new System.Drawing.Point(11, 16);
             this.lb_PIN.Name = "lb_PIN";
-            this.lb_PIN.Size = new System.Drawing.Size(173, 12);
+            this.lb_PIN.Size = new System.Drawing.Size(162, 16);
             this.lb_PIN.TabIndex = 6;
             this.lb_PIN.Text = "인증번호 [0000]를 입력하세요!";
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 161);
+            this.ClientSize = new System.Drawing.Size(458, 184);
             this.Controls.Add(this.lb_PIN);
             this.Controls.Add(this.tb_PIN);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form3";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "대학 수강신청(과부하 방지)";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
