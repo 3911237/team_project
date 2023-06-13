@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Diagnostics;
 //taskkill /pid 프로세스ID /f /t
 
 //dgv_reglist 비율 수정필요, 시간 split필요
@@ -29,6 +30,9 @@ namespace Kwangwoon_Sugang_Practice_Project
         int k = 1; // 검색 순번
 
         int[] randNums;
+
+        public string[,] DataGridViewData { get; set; }
+
         public Form2()
         {
             InitializeComponent();
@@ -690,6 +694,67 @@ namespace Kwangwoon_Sugang_Practice_Project
                 //y.Add(data[5]);
             }
             return dt;
+        }
+
+        private void btn_sched_Click(object sender, EventArgs e)
+        {
+
+            
+            Form4 form4 = new Form4();
+            //form4.ShowDataFromDataGridView(GetDataGridViewValues(dgv_reglist));
+            // Get the data from DataGridView
+            // Get the data from dgv_reglist
+            DataGridViewData = GetDataFromDataGridView(dgv_reglist);
+
+            // Pass the data to Form2
+            form4.DataGridViewData = DataGridViewData;
+            form4.Show();
+        }
+        private string[,] GetDataFromDataGridView(DataGridView dataGridView)
+        {
+            int rowCount = dataGridView.Rows.Count;
+            string[,] values = new string[rowCount, 3]; // Modify the size based on the number of columns
+
+            // Iterate over the rows in the DataGridView and extract the data
+            for (int row = 0; row < rowCount; row++)
+            {
+                values[row, 0] = dataGridView.Rows[row].Cells[3].Value?.ToString() ?? string.Empty; // Column 4
+                values[row, 1] = dataGridView.Rows[row].Cells[5].Value?.ToString() ?? string.Empty; // Column 6
+                values[row, 2] = dataGridView.Rows[row].Cells[6].Value?.ToString() ?? string.Empty; // Column 7
+            }
+
+            return values;
+        }
+
+
+        /*
+        private string[,] GetDataGridViewValues(DataGridView dataGridView)
+        {
+            int rowCount = dataGridView.Rows.Count;
+            int colCount = 3; // Assuming you want to retrieve 3 specific columns
+
+            string[,] values = new string[rowCount, colCount];
+
+            for (int row = 0; row < rowCount; row++)
+            {
+                // Retrieve specific data from desired columns
+                values[row, 0] = dataGridView.Rows[row].Cells[3].Value?.ToString() ?? string.Empty; // Column 4
+                values[row, 1] = dataGridView.Rows[row].Cells[5].Value?.ToString() ?? string.Empty; // Column 5
+                values[row, 2] = dataGridView.Rows[row].Cells[6].Value?.ToString() ?? string.Empty; // Column 6
+            }
+
+            return values;
+        }*/
+
+
+        private void btn_restart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void github_link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/3911237/team_project");
         }
     }
 }
