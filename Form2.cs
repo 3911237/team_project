@@ -37,6 +37,7 @@ namespace Kwangwoon_Sugang_Practice_Project
 
         public string[,] DataGridViewData { get; set; }
 
+
         public Form2()
         {
             InitializeComponent();
@@ -845,26 +846,6 @@ namespace Kwangwoon_Sugang_Practice_Project
 
             return values;
         }
-
-
-        /*
-        private string[,] GetDataGridViewValues(DataGridView dataGridView)
-        {
-            int rowCount = dataGridView.Rows.Count;
-            int colCount = 3; // Assuming you want to retrieve 3 specific columns
-
-            string[,] values = new string[rowCount, colCount];
-
-            for (int row = 0; row < rowCount; row++)
-            {
-                // Retrieve specific data from desired columns
-                values[row, 0] = dataGridView.Rows[row].Cells[3].Value?.ToString() ?? string.Empty; // Column 4
-                values[row, 1] = dataGridView.Rows[row].Cells[5].Value?.ToString() ?? string.Empty; // Column 5
-                values[row, 2] = dataGridView.Rows[row].Cells[6].Value?.ToString() ?? string.Empty; // Column 6
-            }
-
-            return values;
-        }*/
 
 
         private void btn_restart_Click(object sender, EventArgs e)

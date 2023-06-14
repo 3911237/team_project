@@ -24,108 +24,88 @@ namespace Kwangwoon_Sugang_Practice_Project
         public Form4()
         {
             InitializeComponent();
-            
+
         }
 
         private void PopulateTableLayoutPanel()
         {
             // Clear any existing controls in the TableLayoutPanel
             tableLayoutPanel.Controls.Clear();
-            tableLayoutPanel.RowStyles.Clear();
-            tableLayoutPanel.RowCount = 0;
 
-            int rowCount = dataGridViewData.GetLength(0); // Get the number of rows from the array
+            int dataRowCount = dataGridViewData.GetLength(0); // Get the number of rows from the data
 
-            // Iterate over the data received from Form1 and create panels to display the values
-            for (int i = 0; i < rowCount; i++)
+            // Set the border style and fixed size for each panel
+            tableLayoutPanel.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel.Padding = new Padding(4);
+
+            // Define an array of colors to be used for each panel
+            Color[] panelColors = new Color[] { Color.LightBlue, Color.LightGreen, Color.LightYellow, Color.LightPink, Color.LightCoral, Color.LightSalmon, Color.LightSkyBlue, Color.LightGray };
+
+            // Create panel instances for each cell
+            Panel[] panels = new Panel[8];
+
+            // Create labels for each panel
+            Label[] label1s = new Label[8];
+            Label[] label2s = new Label[8];
+
+            for (int i = 0; i < dataRowCount; i++)
             {
-                Panel panel = new Panel();
-                panel.Dock = DockStyle.Fill;
-                panel.BorderStyle = BorderStyle.FixedSingle;
-                panel.AutoSize = true;
-
-                TableLayoutPanel innerTableLayoutPanel = new TableLayoutPanel();
-                innerTableLayoutPanel.Dock = DockStyle.Fill;
-                innerTableLayoutPanel.AutoSize = true;
-
-                innerTableLayoutPanel.ColumnCount = 3;
-
                 string value1 = dataGridViewData[i, 0];
                 string value2 = dataGridViewData[i, 1];
                 string value3 = dataGridViewData[i, 2];
 
-                Label label1 = new Label();
-                label1.Text = value1;
-                label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-
-                Label label2 = new Label();
-                label2.Text = value2;
-                label2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-
-                Label label3 = new Label();
-                label3.Text = value3;
-                label3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-
-                innerTableLayoutPanel.Controls.Add(label1, 0, 0);
-                innerTableLayoutPanel.Controls.Add(label2, 1, 0);
-                innerTableLayoutPanel.Controls.Add(label3, 2, 0);
-
-                panel.Controls.Add(innerTableLayoutPanel);
-
-                // Add the panel to the TableLayoutPanel
-                tableLayoutPanel.RowCount++;
-                tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-                tableLayoutPanel.Controls.Add(panel, 0, i);
-            }
-        }
-
-
-
-
-        /*
-        public void ShowDataFromDataGridView(string[,] dataGridValues)
-        {
-            // Clear the existing label text
-            lblDisplayValues.Text = string.Empty;
-
-            // Loop through the DataGridView values and append them to the label text
-            for (int row = 0; row < dataGridValues.GetLength(0); row++)
-            {
-                for (int col = 0; col < dataGridValues.GetLength(1); col++)
+                for (int j = 0; j < 8; j++)
                 {
-                    string value = dataGridValues[row, col];
-                    lblDisplayValues.Text += value + " ";
+                    // Create panel and label instances
+                    panels[j] = new Panel();
+                    label1s[j] = new Label();
+                    label2s[j] = new Label();
+
+                    // Set common properties for the panels
+                    panels[j].Dock = DockStyle.Fill;
+                    panels[j].Margin = new Padding(0);
+
+                    // Set the background color from the array
+                    panels[j].BackColor = panelColors[i % panelColors.Length];
+
+                    // Set common properties for the labels
+                    label1s[j].AutoSize = false;
+                    label1s[j].AutoEllipsis = true;
+                    label2s[j].AutoSize = true;
+
+                    // Set the text for the labels
+                    label1s[j].Text = value1;
+                    label2s[j].Text = value2;
+
+                    // Set the position of labels within the panels
+                    label1s[j].Location = new Point(4, 4);
+                    label2s[j].Location = new Point(4, 30);
+
+                    // Add the labels to the panels
+                    panels[j].Controls.Add(label1s[j]);
+                    panels[j].Controls.Add(label2s[j]);
                 }
-                lblDisplayValues.Text += Environment.NewLine;
-            }
-        }
-        */
-        /*
-        public void ShowDataFromDataGridView(string[,] dataGridValues)
-        {
-            // Clear the existing labels
-            panelLabels.Controls.Clear();
 
-            // Loop through the DataGridView values and create labels for each item
-            for (int row = 0; row < dataGridValues.GetLength(0); row++)
-            {
-                for (int col = 0; col < dataGridValues.GetLength(1); col++)
+                // Add the panels to the TableLayoutPanel based on the condition
+                if (value3 == "월1수2")
                 {
-                    string value = dataGridValues[row, col];
+                    tableLayoutPanel.Controls.Add(panels[0], 0, 1);
+                    tableLayoutPanel.Controls.Add(panels[1], 1, 1);
 
-                    // Create a new label
-                    Label label = new Label();
-                    label.Text = value;
-                    label.AutoSize = true;
-
-                    // Position the label based on its row and column index
-                    label.Location = new Point(col * 100, row * 30);
-
-                    // Add the label to the panel
-                    panelLabels.Controls.Add(label);
+                }
+                else if (value3 == "월2수1")
+                {
+                    tableLayoutPanel.Controls.Add(panels[1], 0, 2);
+                    tableLayoutPanel.Controls.Add(panels[2], 2, 1);
+                }
+                else
+                {
+                    tableLayoutPanel.Controls.Add(panels[1], 0, 6);
                 }
             }
-        }*/
+
+
+        }
 
 
     }
