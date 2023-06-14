@@ -26,8 +26,8 @@ namespace Kwangwoon_Sugang_Practice_Project
         {
             timer1.Enabled = false;
             this.Hide();
-            Form2 form2 = new Form2();
-            form2.Show();
+            Form0 form0 = new Form0();
+            form0.Show();
         }
     }
 }

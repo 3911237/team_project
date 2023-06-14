@@ -32,6 +32,9 @@ namespace Kwangwoon_Sugang_Practice_Project
 
         int[] randNums;
 
+        public delegate void LoginGetEventHandler(string id, string pw); // 로그인창 이벤트 핸들러
+        public event LoginGetEventHandler DataPassEvent;
+
         public string[,] DataGridViewData { get; set; }
 
         public Form2()
@@ -66,6 +69,11 @@ namespace Kwangwoon_Sugang_Practice_Project
                 Application.Exit();
         }
 
+        public void DataReceive(string id, string pw)
+        {
+            textBox3.Text = id;
+            textBox2.Text = pw;
+        }
         private void cmb_dept1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmb_dept1.SelectedItem.ToString() == "전체검색")
@@ -468,10 +476,14 @@ namespace Kwangwoon_Sugang_Practice_Project
             DataRow[] dr = dt.Select("num ='" + tb_ccode.Text + "'");
             dr[0][2] = "1";//신청했으므로 1로 전환
             int currRowCount = dgv_reglist.RowCount;//행 개수
+            int totalCredit = 0; //총학점
+
             for (int i = 0; i < currRowCount; i++)
             {
                 dgv_reglist.Rows[i].Cells[0].Value = i + 1;
+                totalCredit += Convert.ToInt32(dgv_reglist.Rows[i].Cells[4].Value); // 수강신청 성공한 과목에서 학점 덧셈
             }
+            textBox6.Text = totalCredit + "점"; // 총학점표시
 
             dgv_reglist.CurrentCell = null;
             clearing();
