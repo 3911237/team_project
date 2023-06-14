@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 //taskkill /pid 프로세스ID /f /t
 
 //dgv_reglist 비율 수정필요, 시간 split필요
@@ -50,7 +51,7 @@ namespace Kwangwoon_Sugang_Practice_Project
             dt = CSVtoDataTable(CsvFilePath);
             dataGridView1.DataSource = dt;
             dt.PrimaryKey = new DataColumn[] { dt.Columns["num"], dt.Columns["seat"] };//key 설정
-
+            cmb_favNum.SelectedIndex = 0;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -421,9 +422,10 @@ namespace Kwangwoon_Sugang_Practice_Project
                             continue;
                     if (!(data[2].Contains(tb_csearch.Text)))
                         continue; // 검색창에 입력한 텍스트를 포함한 과목만 표시함
-                    if (cb_avail.Checked)
-                        if (data[5] == "0") continue;
                     DataRow[] dr = dt.Select("num ='" + data[0] + "'");
+                    if (cb_avail.Checked)
+                        if (dr[0][1].ToString() == "0")
+                            continue;
                     dgv_clist.Rows.Add(k, data[0], data[1], data[2], data[3], data[4], dr[0][1].ToString() == "0" ? "만석" : dr[0][1], data[6]);
                     k++;
                 }
@@ -459,8 +461,9 @@ namespace Kwangwoon_Sugang_Practice_Project
                             MessageBox.Show("해당 과목은 만석입니다", "여석 없음", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             return;
                         }
-            */            
+            */
             //dgv_reglist에 추가하는 부분
+            Thread.Sleep(1000); //신청 버튼 누르면 프로그램이 1초 멈춤(실제 프로그램도 멈춤)
             dgv_reglist.Rows.Add("",tb_ccode.Text,tb_type.Text,tb_subject.Text,tb_credit.Text,tb_prof.Text,tb_day1.Text,tb_time1.Text+"교시",tb_room1.Text,"","","");
             DataRow[] dr = dt.Select("num ='" + tb_ccode.Text + "'");
             dr[0][2] = "1";//신청했으므로 1로 전환
@@ -539,15 +542,18 @@ namespace Kwangwoon_Sugang_Practice_Project
         {
             
             //Random random = new Random();
-            while (true)//계속해서 생성해줘야 함
+            for(int j = 0; j < 10; j++)//계속해서 생성해줘야 함
             {
                 Thread.Sleep(3000);//3초 delay
-                randNums = generatorRandomNumber(0, 30, dt.Rows.Count);//과목수 만큼 생성
+                randNums = generatorRandomNumber(0, 20, dt.Rows.Count);//과목수 만큼 생성
                 for (int i = 0; i < randNums.Length; i++)
                 {
                     if (Convert.ToInt32(dt.Rows[i][1]) == 0)//0이면 안 빼줌
                         continue;
-                    dt.Rows[i][1] = (Convert.ToInt32(dt.Rows[i][1]) - randNums[i]).ToString();//빼기
+                    if (Convert.ToString(dt.Rows[i][3]) != "X")
+                        dt.Rows[i][1] = (Convert.ToInt32(dt.Rows[i][1]) - randNums[i]).ToString();//빼기
+                    else
+                        dt.Rows[i][1] =  (Convert.ToInt32(dt.Rows[i][1]) - 3 * randNums[i]).ToString();//온라인 수업이면 3배 더 빠르게 뺌
                     if (Convert.ToInt32(dt.Rows[i][1]) <= 0)//음수면 0으로 설정 
                         dt.Rows[i][1] = "0";
 
@@ -632,6 +638,9 @@ namespace Kwangwoon_Sugang_Practice_Project
             {
                 selected = -3;
             }
+            for (int i = 0; i < dgv_reglist.RowCount; i++)// 같은 이름일 때
+                if (dgv_reglist.Rows[i].Cells[3].Value.ToString() == dgv_favList.Rows[e.RowIndex].Cells[3].Value.ToString())
+                    selected = -3;
             tb_ccode.Text=dgv_favList.Rows[e.RowIndex].Cells[2].Value as String;
             tb_subject.Text = dgv_favList.Rows[e.RowIndex].Cells[3].Value as String;
             tb_credit.Text= dgv_favList.Rows[e.RowIndex].Cells[4].Value as String;
@@ -683,13 +692,14 @@ namespace Kwangwoon_Sugang_Practice_Project
             DataTable dt = new DataTable();
             dt.Columns.Add("num");
             dt.Columns.Add("seat");
-            dt.Columns.Add("isApply");//신청된 과목인지
+            dt.Columns.Add("isApply");
+            dt.Columns.Add("time");//신청된 과목인지
 
             while (!file.EndOfStream)
             {
                 string line=file.ReadLine();
                 string[] data = line.Split(',');
-                dt.Rows.Add(data[0], data[5],0);
+                dt.Rows.Add(data[0], data[5], 0, data[6]);
                 //x.Add(data[0]);
                 //y.Add(data[5]);
             }

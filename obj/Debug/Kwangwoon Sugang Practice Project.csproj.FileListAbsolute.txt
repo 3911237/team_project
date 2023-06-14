@@ -73,3 +73,4 @@ C:\Users\dncrz\KWPP2ndver\obj\Debug\Kwangwoon Sugang Practice Project.csproj.Cor
 C:\Users\dncrz\KWPP2ndver\obj\Debug\Kwangwoon Sugang Practice Project.exe
 C:\Users\dncrz\KWPP2ndver\obj\Debug\Kwangwoon Sugang Practice Project.pdb
 C:\Users\dncrz\KWPP2ndver\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form4.resources
+C:\Users\1237\team_project\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form4.resources
