@@ -103,3 +103,18 @@ D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_projec
 D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Debug\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
 D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Debug\Kwangwoon Sugang Practice Project.exe
 D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Debug\Kwangwoon Sugang Practice Project.pdb
+C:\Users\dncrz\KWPP2ndver-latest\bin\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\dncrz\KWPP2ndver-latest\bin\Debug\Kwangwoon Sugang Practice Project.exe.config
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon Sugang Practice Project.csproj.AssemblyReference.cache
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon Sugang Practice Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form0.resources
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form1.resources
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form2.resources
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form3.resources
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form4.resources
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon_Sugang_Practice_Project.Properties.Resources.resources
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon Sugang Practice Project.csproj.GenerateResource.cache
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\dncrz\KWPP2ndver-latest\obj\Debug\Kwangwoon Sugang Practice Project.pdb
+C:\Users\dncrz\KWPP2ndver-latest\bin\Debug\Kwangwoon Sugang Practice Project.pdb
