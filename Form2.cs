@@ -472,7 +472,7 @@ namespace Kwangwoon_Sugang_Practice_Project
             */
             //dgv_reglist에 추가하는 부분
             Thread.Sleep(1000); //신청 버튼 누르면 프로그램이 1초 멈춤(실제 프로그램도 멈춤)
-            dgv_reglist.Rows.Add("",tb_ccode.Text,tb_type.Text,tb_subject.Text,tb_credit.Text,tb_prof.Text,tb_day1.Text,tb_time1.Text+"교시",tb_room1.Text,"","","");
+            dgv_reglist.Rows.Add("", tb_ccode.Text, tb_type.Text, tb_subject.Text, tb_credit.Text, tb_prof.Text, tb_day1.Text, tb_time1.Text + "교시", tb_room1.Text, tb_day2.Text, tb_time2.Text + "교시", "");
             DataRow[] dr = dt.Select("num ='" + tb_ccode.Text + "'");
             dr[0][2] = "1";//신청했으므로 1로 전환
             int currRowCount = dgv_reglist.RowCount;//행 개수

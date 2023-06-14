@@ -45,12 +45,12 @@ namespace Kwangwoon_Sugang_Practice_Project
 
         private void Form0_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void Form0_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
 
         }
     }
