@@ -37,5 +37,21 @@ namespace Kwangwoon_Sugang_Practice_Project
             MessageBox.Show("로그인 되었습니다.", "알림");
             this.Close();
         }
+
+        private void stid_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form0_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form0_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+
+        }
     }
 }

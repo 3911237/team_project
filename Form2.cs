@@ -657,7 +657,105 @@ namespace Kwangwoon_Sugang_Practice_Project
             tb_subject.Text = dgv_favList.Rows[e.RowIndex].Cells[3].Value as String;
             tb_credit.Text= dgv_favList.Rows[e.RowIndex].Cells[4].Value as String;
             tb_prof.Text= dgv_favList.Rows[e.RowIndex].Cells[5].Value as String;
-            tb_day1.Text=dgv_favList.Rows[e.RowIndex].Cells[6].Value as String;//시간 split 처리 필요
+            String times = dgv_favList.Rows[e.RowIndex].Cells[6].Value as String;//시간 split 처리 필요
+            times = times.Trim();
+            String t1 = ""; String d1 = ""; String t2 = ""; String d2 = ""; String t3 = ""; String d3 = ""; String t4 = ""; String d4 = "";
+            String t5 = ""; String d5 = ""; String t6 = ""; String d6 = ""; String t7 = ""; String d7 = "";
+            for (int i = 0; i < times.Length; i += 2)
+            {
+                if (times[i].ToString() == "월")
+                {
+                    t1 += times[i + 1].ToString();
+                }
+                if (times[i].ToString() == "화")
+                {
+                    t2 += times[i + 1].ToString();
+                }
+
+                if (times[i].ToString() == "수")
+                {
+                    t3 += times[i + 1].ToString();
+                }
+
+                if (times[i].ToString() == "목")
+                {
+                    t4 += times[i + 1].ToString();
+                }
+
+                if (times[i].ToString() == "금")
+                {
+                    t5 += times[i + 1].ToString();
+                }
+
+                if (times[i].ToString() == "토")
+                {
+                    t6 += times[i + 1].ToString();
+                }
+                if (times[i].ToString() == "X")
+                {
+                    t7 += times[i + 1].ToString();
+                }
+            }
+            List<String> T = new List<String>();
+            if (t1 != "")
+            {
+                T.Add("월");
+                T.Add(t1);
+            }
+            if (t2 != "")
+            {
+                T.Add("화");
+                T.Add(t2);
+            }
+            if (t3 != "")
+            {
+                T.Add("수");
+                T.Add(t3);
+            }
+            if (t4 != "")
+            {
+                T.Add("목");
+                T.Add(t4);
+            }
+            if (t5 != "")
+            {
+                T.Add("금");
+                T.Add(t5);
+            }
+
+            if (t7 != "")
+            {
+                T.Add("토");
+                T.Add(t6);
+            }
+            if (t7 != "")
+            {
+                T.Add("X");
+                T.Add(t7);
+            }
+            T.Add(" ");
+            T.Add(" ");
+            T.Add(" ");
+            T.Add(" ");
+            T.Add(" ");
+            T.Add(" ");
+            T.Add(" ");
+            T.Add(" ");
+            T.Add(" ");
+
+
+
+
+            tb_day1.Text = T[0];
+            tb_time1.Text = T[1];
+            tb_day2.Text = T[2];
+            tb_time2.Text = T[3];
+            tb_day3.Text = T[4];
+            tb_time3.Text = T[5];
+            tb_day4.Text = T[6];
+            tb_time4.Text = T[7];
+            tb_day4.Text = T[8];
+            tb_time4.Text = T[9];
             tb_room1.Text=dgv_favList.Rows[e.RowIndex].Cells[7].Value as String;
             tb_avail.Text = (dr[0][1].ToString() == "0") ?"만석":"여석";
             tb_type.Text= dgv_favList.Rows[e.RowIndex].Cells[9].Value as String;
