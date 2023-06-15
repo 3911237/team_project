@@ -74,7 +74,7 @@ namespace Kwangwoon_Sugang_Practice_Project
             // 
             // stname_label
             // 
-            this.stname_label.Location = new System.Drawing.Point(115, 465);
+            this.stname_label.Location = new System.Drawing.Point(113, 465);
             this.stname_label.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.stname_label.Name = "stname_label";
             this.stname_label.Size = new System.Drawing.Size(86, 29);
@@ -84,7 +84,7 @@ namespace Kwangwoon_Sugang_Practice_Project
             // 
             // stid_label
             // 
-            this.stid_label.Location = new System.Drawing.Point(115, 428);
+            this.stid_label.Location = new System.Drawing.Point(113, 421);
             this.stid_label.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.stid_label.Name = "stid_label";
             this.stid_label.Size = new System.Drawing.Size(86, 29);
@@ -96,7 +96,7 @@ namespace Kwangwoon_Sugang_Practice_Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 544);
+            this.ClientSize = new System.Drawing.Size(782, 544);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.stname_tbox);
             this.Controls.Add(this.stid_tbox);

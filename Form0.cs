@@ -29,7 +29,6 @@ namespace Kwangwoon_Sugang_Practice_Project
             this.Login(stid_tbox.Text, stname_tbox.Text);
             string id = userinfo.GetId();
             string pw = userinfo.GetPw();
-
             Form2 form2 = new Form2();
             form2.DataPassEvent += new Form2.LoginGetEventHandler(form2.DataReceive);
             form2.DataReceive(id, pw);
@@ -38,10 +37,6 @@ namespace Kwangwoon_Sugang_Practice_Project
             this.Close();
         }
 
-        private void stid_label_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form0_FormClosing(object sender, FormClosingEventArgs e)
         {

@@ -22,3 +22,22 @@ D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\team_project\obj\R
 D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\team_project\obj\Release\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
 D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\team_project\obj\Release\Kwangwoon Sugang Practice Project.exe
 D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\team_project\obj\Release\Kwangwoon Sugang Practice Project.pdb
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\bin\Release\Kwangwoon Sugang Practice Project.exe.config
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\bin\Release\Kwangwoon Sugang Practice Project.exe
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\bin\Release\Kwangwoon Sugang Practice Project.pdb
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon Sugang Practice Project.csproj.AssemblyReference.cache
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon Sugang Practice Project.csproj.SuggestedBindingRedirects.cache
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon_Sugang_Practice_Project.Form0.resources
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon_Sugang_Practice_Project.Form1.resources
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon_Sugang_Practice_Project.Form2.resources
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon_Sugang_Practice_Project.Form3.resources
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon_Sugang_Practice_Project.Form4.resources
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon_Sugang_Practice_Project.Properties.Resources.resources
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon Sugang Practice Project.csproj.GenerateResource.cache
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon Sugang Practice Project.exe
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon Sugang Practice Project.pdb
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\bin\Release\Kwangwoon Sugang Practice Project.exe.manifest
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\bin\Release\Kwangwoon Sugang Practice Project.application
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon Sugang Practice Project.exe.manifest
+D:\광운대\수업\3-1\응용소프트웨어실습-이준혁\팀플\team_project\obj\Release\Kwangwoon Sugang Practice Project.application
