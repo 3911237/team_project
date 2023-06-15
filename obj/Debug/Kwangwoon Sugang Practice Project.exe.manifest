@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Kwangwoon Sugang Practice Project.exe" size="381408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Kwangwoon Sugang Practice Project.exe" size="380896">
       <assemblyIdentity name="Kwangwoon Sugang Practice Project" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>seyrVLVgLIf748fobY9HTGsCwXxAcGHGg+Zg15bet6M=</dsig:DigestValue>
+        <dsig:DigestValue>9h1DIWugLbJp31mHT7s3UFAAbK2IxuJwdlDjM4tLLUk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

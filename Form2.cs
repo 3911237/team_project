@@ -13,9 +13,6 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 //taskkill /pid 프로세스ID /f /t
 
-//dgv_reglist 비율 수정필요, 시간 split필요
-//추가적으로 학번 성명 표기
-
 namespace Kwangwoon_Sugang_Practice_Project
 {
     public partial class Form2 : Form
@@ -23,8 +20,6 @@ namespace Kwangwoon_Sugang_Practice_Project
         int sec = 50;
         bool isStarted=false;//수강신청 시작했는지
         int selected = -1;//즐찾에서 조회버튼 누를때
-        //List<bool> done = new List<bool>();//수강신청한 과목들
-        //List<bool> full = new List<bool>();//여석이 다 찼는 지
         //int num=0;//몇개의 수강신청 신청했는 지
         string CsvFilePath = "2023_01_lecture_list.csv";
         DataTable dt;
@@ -876,7 +871,6 @@ namespace Kwangwoon_Sugang_Practice_Project
             dr[0][2] = "0";//삭제했으므로 0으로 재설정
             dgv_reglist.Rows.Remove(row);
 
-            //dgv_reglist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             int currRowCount = dgv_reglist.RowCount;//행 개수
 
             for (int i = 0; i < currRowCount; i++)
@@ -888,8 +882,6 @@ namespace Kwangwoon_Sugang_Practice_Project
 
         public DataTable CSVtoDataTable(string strFilePath)
         {
-            //List<String>x=new List<String>();
-            //List<String>y=new List<String>();
             StreamReader file=new StreamReader(strFilePath);
             DataTable dt = new DataTable();
             dt.Columns.Add("num");
@@ -903,8 +895,6 @@ namespace Kwangwoon_Sugang_Practice_Project
                 string line=file.ReadLine();
                 string[] data = line.Split(',');
                 dt.Rows.Add(data[0], data[5], 0, data[6],data[2]);
-                //x.Add(data[0]);
-                //y.Add(data[5]);
             }
             return dt;
         }
@@ -914,7 +904,6 @@ namespace Kwangwoon_Sugang_Practice_Project
 
             
             Form4 form4 = new Form4();
-            //form4.ShowDataFromDataGridView(GetDataGridViewValues(dgv_reglist));
             // Get the data from DataGridView
             // Get the data from dgv_reglist
             DataGridViewData = GetDataFromDataGridView(dgv_reglist);
