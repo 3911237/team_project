@@ -33,6 +33,7 @@ namespace Kwangwoon_Sugang_Practice_Project
         String prevccode = ""; // 이전에 조회한 과목 코드
         int[] randNums;
         int click = 0;
+        int checktime = 0;
 
         public delegate void LoginGetEventHandler(string id, string pw); // 로그인창 이벤트 핸들러
         public event LoginGetEventHandler DataPassEvent;
@@ -444,8 +445,74 @@ namespace Kwangwoon_Sugang_Practice_Project
             }
         }
 
+        private void cCheck(string new_t1,string new_t2) // 겹치는 시간 있는지 체크 하는 함수
+        {
+            checktime = 0; //체크용 전역변수
+            int currRowCount = dgv_reglist.RowCount;
+            //string[] lecArray = new string [20];
+            List<string> lecList = new List<string>(); //문자열 담을 리스트
+            for (int i = 0; i < currRowCount; i++)
+            {
+                string day1 = Convert.ToString(dgv_reglist.Rows[i].Cells[6].Value);
+                string time1 = Convert.ToString(dgv_reglist.Rows[i].Cells[7].Value);
+                string day2 = Convert.ToString(dgv_reglist.Rows[i].Cells[9].Value);
+                string time2 = Convert.ToString(dgv_reglist.Rows[i].Cells[10].Value);
+
+                string t1 = day1 + time1;
+                string t2 = day2 + time2;
+                lecList.Add(t1);
+                lecList.Add(t2);
+                //lecArray.Append(t1);
+                //lecArray.Append(t2);
+            }
+            /*
+            int index = Array.IndexOf(lecArray, new_t1);
+            int index2 = Array.IndexOf(lecArray, new_t2);
+
+            if (index > -1)
+            {
+                checktime = -1;
+                return;
+            }
+            else if (index2 > -1)
+            {
+                checktime = -1;
+                return;
+            }
+            else
+                checktime = 0;
+                return;
+            */
+            /*
+            foreach(string nn in lecList)
+            {
+                if (nn == new_t1)
+                {
+                    checktime = -1;
+                    return;
+                }
+                else if (nn == new_t2)
+                {
+                    checktime = -1;
+                    break;
+                }
+                    
+            }
+            */
+            var Check = lecList.Contains(new_t1);
+            var Check2 = lecList.Contains(new_t2);
+            
+            //var Check = Array.Exists(lecArray, x => x == new_t1);
+            //var Check2 = Array.Exists(lecArray, x => x == new_t2);
+            if (Check || Check2 == true)
+                checktime = -1;
+                return;
+            
+            
+        }
         private void btn_apply_Click(object sender, EventArgs e)//수강신청 버튼 눌렀을 때
         {
+            cCheck(tb_day1.Text + tb_time1.Text+"교시", tb_day2.Text + tb_time2.Text+"교시");
             if (selected == -1) // 조회한 과목이 없는 경우
             {
                 MessageBox.Show("수강신청하려는 과목을 먼저 조회해주세요!", "오류", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -462,7 +529,14 @@ namespace Kwangwoon_Sugang_Practice_Project
                 return;
 
             }
-
+            else if (checktime == -1)
+            {
+                MessageBox.Show("시간이 겹치는 강의가 있습니다!", "경고", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
+            
+            
             //dgv_reglist에 추가하는 부분
             Thread.Sleep(1000); //신청 버튼 누르면 프로그램이 1초 멈춤(실제 프로그램도 딜레이 있음)
             if(tb_time1.Text=="비대면")

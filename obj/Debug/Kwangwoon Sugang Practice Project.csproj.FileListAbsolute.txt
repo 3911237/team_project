@@ -146,3 +146,21 @@ C:\Users\1237\team_project\bin\Debug\Kwangwoon Sugang Practice Project.applicati
 C:\Users\1237\team_project\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form0.resources
 C:\Users\1237\team_project\obj\Debug\Kwangwoon Sugang Practice Project.exe.manifest
 C:\Users\1237\team_project\obj\Debug\Kwangwoon Sugang Practice Project.application
+C:\Users\민성주\Documents\project\최신\bin\Debug\Kwangwoon Sugang Practice Project.exe.config
+C:\Users\민성주\Documents\project\최신\bin\Debug\Kwangwoon Sugang Practice Project.exe.manifest
+C:\Users\민성주\Documents\project\최신\bin\Debug\Kwangwoon Sugang Practice Project.application
+C:\Users\민성주\Documents\project\최신\bin\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\민성주\Documents\project\최신\bin\Debug\Kwangwoon Sugang Practice Project.pdb
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon Sugang Practice Project.csproj.AssemblyReference.cache
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form0.resources
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form1.resources
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form2.resources
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form3.resources
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon_Sugang_Practice_Project.Form4.resources
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon_Sugang_Practice_Project.Properties.Resources.resources
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon Sugang Practice Project.csproj.GenerateResource.cache
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon Sugang Practice Project.csproj.CoreCompileInputs.cache
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon Sugang Practice Project.exe.manifest
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon Sugang Practice Project.application
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon Sugang Practice Project.exe
+C:\Users\민성주\Documents\project\최신\obj\Debug\Kwangwoon Sugang Practice Project.pdb
