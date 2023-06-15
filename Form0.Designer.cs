@@ -29,95 +29,88 @@ namespace Kwangwoon_Sugang_Practice_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.stid_tbox = new System.Windows.Forms.TextBox();
             this.stname_tbox = new System.Windows.Forms.TextBox();
             this.login_btn = new System.Windows.Forms.Button();
-            this.stname_label = new System.Windows.Forms.Button();
-            this.stid_label = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Kwangwoon_Sugang_Practice_Project.Properties.Resources.opening;
-            this.pictureBox1.Location = new System.Drawing.Point(113, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(513, 290);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // stid_tbox
             // 
-            this.stid_tbox.Location = new System.Drawing.Point(245, 428);
+            this.stid_tbox.Location = new System.Drawing.Point(98, 39);
             this.stid_tbox.Name = "stid_tbox";
-            this.stid_tbox.Size = new System.Drawing.Size(196, 25);
+            this.stid_tbox.Size = new System.Drawing.Size(196, 22);
             this.stid_tbox.TabIndex = 7;
             // 
             // stname_tbox
             // 
-            this.stname_tbox.Location = new System.Drawing.Point(245, 465);
+            this.stname_tbox.Location = new System.Drawing.Point(98, 78);
             this.stname_tbox.Name = "stname_tbox";
-            this.stname_tbox.Size = new System.Drawing.Size(196, 25);
+            this.stname_tbox.Size = new System.Drawing.Size(196, 22);
             this.stname_tbox.TabIndex = 8;
             // 
             // login_btn
             // 
-            this.login_btn.Location = new System.Drawing.Point(501, 427);
+            this.login_btn.Location = new System.Drawing.Point(330, 37);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(75, 23);
+            this.login_btn.Size = new System.Drawing.Size(75, 63);
             this.login_btn.TabIndex = 9;
             this.login_btn.Text = "로그인";
             this.login_btn.UseVisualStyleBackColor = true;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
             // 
-            // stname_label
+            // label1
             // 
-            this.stname_label.Location = new System.Drawing.Point(113, 465);
-            this.stname_label.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.stname_label.Name = "stname_label";
-            this.stname_label.Size = new System.Drawing.Size(86, 29);
-            this.stname_label.TabIndex = 6;
-            this.stname_label.Text = "이름";
-            this.stname_label.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(31, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 25);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "학번 : ";
             // 
-            // stid_label
+            // label2
             // 
-            this.stid_label.Location = new System.Drawing.Point(113, 421);
-            this.stid_label.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.stid_label.Name = "stid_label";
-            this.stid_label.Size = new System.Drawing.Size(86, 29);
-            this.stid_label.TabIndex = 5;
-            this.stid_label.Text = "학번";
-            this.stid_label.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(31, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "이름 : ";
             // 
             // Form0
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 544);
+            this.BackColor = System.Drawing.Color.Firebrick;
+            this.ClientSize = new System.Drawing.Size(474, 185);
+            this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.stname_tbox);
             this.Controls.Add(this.stid_tbox);
-            this.Controls.Add(this.stname_label);
-            this.Controls.Add(this.stid_label);
-            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form0";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "로그인";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form0_FormClosing_1);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox stid_tbox;
         private System.Windows.Forms.TextBox stname_tbox;
         private System.Windows.Forms.Button login_btn;
-        private System.Windows.Forms.Button stname_label;
-        private System.Windows.Forms.Button stid_label;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

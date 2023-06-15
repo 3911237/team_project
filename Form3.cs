@@ -21,9 +21,9 @@ namespace Kwangwoon_Sugang_Practice_Project
         private void btnOK_Click(object sender, EventArgs e) // 확인 버튼
         {
             if (tb_PIN.Text == PIN)
-                this.DialogResult = DialogResult.OK; // 인증번호가 맞으면 DialogResult를 OK로 설정
+                this.DialogResult = DialogResult.OK; 
             else
-                this.DialogResult = DialogResult.No; // 인증번호가 틀리면 DialogResult를 No로 설정
+                this.DialogResult = DialogResult.No; 
         }
 
         private void btnCancel_Click(object sender, EventArgs e) // 취소 버튼

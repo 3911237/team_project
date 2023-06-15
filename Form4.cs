@@ -12,8 +12,8 @@ namespace Kwangwoon_Sugang_Practice_Project
 {
     public partial class Form4 : Form
     {
-
-        private string[,] dataGridViewData; // Field to store the data received from Form1
+        // Field to store the data received from Form2
+        private string[,] dataGridViewData; 
 
         public string[,] DataGridViewData
         {

@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Kwangwoon Sugang Practice Project.exe.manifest" size="3639">
+    <dependentAssembly dependencyType="install" codebase="Kwangwoon Sugang Practice Project.exe.manifest" size="3607">
       <assemblyIdentity name="Kwangwoon Sugang Practice Project.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2T95qSWBsshGSsSLw8eVHGXRUuV2tOu+3SCxmqo6oe4=</dsig:DigestValue>
+        <dsig:DigestValue>gElajN+uFUyI7MZu7v6y3n4Kgb+hFLyysEwSH1YiGRg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
