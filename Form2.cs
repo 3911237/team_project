@@ -460,6 +460,7 @@ namespace Kwangwoon_Sugang_Practice_Project
 
                 string t1 = day1 + time1;
                 string t2 = day2 + time2;
+
                 lecList.Add(t1);
                 lecList.Add(t2);
                 //lecArray.Append(t1);
@@ -501,7 +502,6 @@ namespace Kwangwoon_Sugang_Practice_Project
             */
             var Check = lecList.Contains(new_t1);
             var Check2 = lecList.Contains(new_t2);
-            
             //var Check = Array.Exists(lecArray, x => x == new_t1);
             //var Check2 = Array.Exists(lecArray, x => x == new_t2);
             if (Check || Check2 == true)
@@ -532,6 +532,11 @@ namespace Kwangwoon_Sugang_Practice_Project
             else if (checktime == -1)
             {
                 MessageBox.Show("시간이 겹치는 강의가 있습니다!", "경고", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else if (Convert.ToInt32(textBox6.Text) > 22) //22학점 초과시 신청불가 기능
+            {
+                MessageBox.Show("수강학점이 22점을 초과 할 수 없습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             
